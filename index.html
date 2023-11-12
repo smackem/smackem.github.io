@@ -1,13 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>dozem</title>
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 600px;
+            height: 900px;
+        }
+        .text {
+            position: absolute;
+            left: 360px;
+            top: 400px;
+            font-family: "Blackadder ITC",cursive;
+            font-size: x-large;
+        }
+    </style>
+    <title>dozem</title>
 </head>
-<body>
-    <ul>
-        <li><a href="assets/Cool80z.m4a">Cool80z</a></li>
-        <li><a href="assets/DyingDrums-bright2.m4a">DyingDrums</a></li>
-        <li><a href="assets/MasterDoom-bright.m4a">MasterOfDoom</a></li>
-        <li><a href="assets/SechsAchtel-bright.m4a">SixEight</a></li>
-    </ul>
+<body style="background-color: black">
+<div class="container">
+    <img class="image" src="img/ghost-cross.png" alt="Image" />
+    <div class="text">
+        <ul>
+            <li><a href="assets/Cool80z.m4a">Cool80z</a></li>
+            <li><a href="assets/DyingDrums-bright2.m4a">DyingDrums</a></li>
+            <li><a href="assets/MasterDoom-bright.m4a">MasterOfDoom</a></li>
+            <li><a href="assets/SechsAchtel-bright.m4a">SixEight</a></li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>
+
