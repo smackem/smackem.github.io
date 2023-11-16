@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
         @font-face {
             font-family: Quentin;
             src: url("font/Quentin.otf") format("opentype");
         }
-
         @font-face {
             font-family: Quentin;
             font-weight: bold;
             src: url("font/Quentin.otf") format("opentype");
         }
-
+        body {
+            background-color: black;
+        }
         .container {
             position: relative;
             width: 100%;
@@ -21,77 +23,102 @@
         .image {
             position: absolute;
             left: 0;
-            top: 0;
-            width: 600px;
-            height: 900px;
+            top: 10px;
+            width: 612px;
+            height: 827px;
         }
         .text {
             position: absolute;
             left: 360px;
             top: 400px;
+        }
+        a.song {
+            text-decoration: none;
             font-family: Quentin,cursive;
             font-size: xx-large;
             color: white;
         }
-        a {
-            color: white;
-            text-decoration: underline;
+        a.song:hover {
+            text-decoration: none;
         }
         ul {
             list-style-type: none;
         }
-        /*
-        audio::-webkit-media-controls-panel
-        audio::-webkit-media-controls-mute-button
-        audio::-webkit-media-controls-play-button
-        audio::-webkit-media-controls-timeline-container
-        audio::-webkit-media-controls-current-time-display
-        audio::-webkit-media-controls-time-remaining-display
-        audio::-webkit-media-controls-timeline
-        audio::-webkit-media-controls-volume-slider-container
-        audio::-webkit-media-controls-volume-slider
-        audio::-webkit-media-controls-seek-back-button
-        audio::-webkit-media-controls-seek-forward-button
-        audio::-webkit-media-controls-fullscreen-button
-        audio::-webkit-media-controls-rewind-button
-        audio::-webkit-media-controls-return-to-realtime-button
-        audio::-webkit-media-controls-toggle-closed-captions-button
-        */
+        .control {
+            color: white;
+            width: 36px;
+            height:48px;
+            font-size: 18pt;
+            cursor: pointer;
+        }
+        .player {}
     </style>
     <title>dozem</title>
 </head>
-<body style="background-color: black">
+<body>
 <div class="container">
     <img class="image" src="img/ghost-cross.png" alt="Image" />
     <div class="text">
         <ul>
             <li>
-                <audio>
-                    <source src="assets/SechsAchtel-bright.m4a" type="audio/ogg">
-                </audio>
-                <a href="assets/SechsAchtel-bright.m4a">SixEight</a>
+                <span onclick="audioPlayPause(this)" class="player">
+                    <i class="control glyphicon glyphicon-play"></i>
+                    <audio class="audio-player" src="assets/SechsAchtel-bright.m4a" preload="auto"></audio>
+                    <a class="song" href="javascript:void(0);">SixEight</a>
+                </span>
             </li>
             <li>
-                <audio>
-                    <source src="assets/MasterDoom-bright.m4a" type="audio/ogg">
-                </audio>
-                <a href="assets/MasterDoom-bright.m4a">MasterOfDoom</a>
+                <span onclick="audioPlayPause(this)" class="player">
+                    <i class="control glyphicon glyphicon-play"></i>
+                    <audio class="audio-player" src="assets/MasterDoom-bright.m4a" preload="auto"></audio>
+                    <a class="song" href="javascript:void(0);">MasterOfDoom</a>
+                </span>
             </li>
             <li>
-                <audio>
-                    <source src="assets/DyingDrums-bright2.m4a" type="audio/ogg">
-                </audio>
-                <a href="assets/DyingDrums-bright2.m4a">DyingDrums</a>
+                <span onclick="audioPlayPause(this)" class="player">
+                    <i class="control glyphicon glyphicon-play"></i>
+                    <audio class="audio-player" src="assets/DyingDrums-bright2.m4a" preload="auto"></audio>
+                    <a class="song" href="javascript:void(0);">DyingDrums</a>
+                </span>
             </li>
             <li>
-                <audio>
-                    <source src="assets/Cool80z.m4a" type="audio/ogg">
-                </audio>
-                <a href="assets/Cool80z.m4a">Cool80z</a>
+                <span onclick="audioPlayPause(this)" class="player">
+                    <i class="control glyphicon glyphicon-play"></i>
+                    <audio class="audio-player" src="assets/Cool80z.m4a" preload="auto"></audio>
+                    <a class="song" href="javascript:void(0);">Cool80z</a>
+                </span>
             </li>
         </ul>
     </div>
 </div>
 </body>
+
+<script>
+    function stopAudio(player) {
+        let audio = player.querySelector(".audio-player");
+        let icon = player.querySelector(".control");
+        icon.className = "control glyphicon glyphicon-play";
+        audio.pause();
+        audio.currentTime = 0;
+    }
+
+    function audioPlayPause(object) {
+        const players = document.getElementsByClassName("player");
+        for (let i = 0; i < players.length; i++) {
+            const player = players[i];
+            if (player === object) continue;
+            stopAudio(player);
+        }
+
+        let audio = object.querySelector(".audio-player");
+        let icon = object.querySelector(".control");
+        if (audio.paused) {
+            icon.className = "control glyphicon glyphicon-stop";
+            audio.play();
+        } else {
+            stopAudio(object);
+        }
+    }
+</script>
 </html>
 
