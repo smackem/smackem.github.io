@@ -2,6 +2,17 @@
 <html lang="en">
 <head>
     <style>
+        @font-face {
+            font-family: Quentin;
+            src: url("font/Quentin.otf") format("opentype");
+        }
+
+        @font-face {
+            font-family: Quentin;
+            font-weight: bold;
+            src: url("font/Quentin.otf") format("opentype");
+        }
+
         .container {
             position: relative;
             width: 100%;
@@ -18,16 +29,34 @@
             position: absolute;
             left: 360px;
             top: 400px;
-            font-family: "Blackadder ITC","Lucida Handwriting","Script MT Bold",cursive;
+            font-family: Quentin,cursive;
             font-size: xx-large;
             color: white;
         }
         a {
             color: white;
+            text-decoration: underline;
         }
         ul {
             list-style-type: none;
         }
+        /*
+        audio::-webkit-media-controls-panel
+        audio::-webkit-media-controls-mute-button
+        audio::-webkit-media-controls-play-button
+        audio::-webkit-media-controls-timeline-container
+        audio::-webkit-media-controls-current-time-display
+        audio::-webkit-media-controls-time-remaining-display
+        audio::-webkit-media-controls-timeline
+        audio::-webkit-media-controls-volume-slider-container
+        audio::-webkit-media-controls-volume-slider
+        audio::-webkit-media-controls-seek-back-button
+        audio::-webkit-media-controls-seek-forward-button
+        audio::-webkit-media-controls-fullscreen-button
+        audio::-webkit-media-controls-rewind-button
+        audio::-webkit-media-controls-return-to-realtime-button
+        audio::-webkit-media-controls-toggle-closed-captions-button
+        */
     </style>
     <title>dozem</title>
 </head>
@@ -36,10 +65,30 @@
     <img class="image" src="img/ghost-cross.png" alt="Image" />
     <div class="text">
         <ul>
-            <li><a href="assets/DyingDrums-bright2.m4a">DyingDrums</a></li>
-            <li><a href="assets/Cool80z.m4a">Cool80z</a></li>
-            <li><a href="assets/MasterDoom-bright.m4a">MasterOfDoom</a></li>
-            <li><a href="assets/SechsAchtel-bright.m4a">SixEight</a></li>
+            <li>
+                <audio>
+                    <source src="assets/DyingDrums-bright2.m4a" type="audio/ogg">
+                </audio>
+                <a href="assets/DyingDrums-bright2.m4a">DyingDrums</a>
+            </li>
+            <li>
+                <audio>
+                    <source src="assets/Cool80z.m4a" type="audio/ogg">
+                </audio>
+                <a href="assets/Cool80z.m4a">Cool80z</a>
+            </li>
+            <li>
+                <audio>
+                    <source src="assets/MasterDoom-bright.m4a" type="audio/ogg">
+                </audio>
+                <a href="assets/MasterDoom-bright.m4a">MasterOfDoom</a>
+            </li>
+            <li>
+                <audio>
+                    <source src="assets/SechsAchtel-bright.m4a" type="audio/ogg">
+                </audio>
+                <a href="assets/SechsAchtel-bright.m4a">SixEight</a>
+            </li>
         </ul>
     </div>
 </div>
