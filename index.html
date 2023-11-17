@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
@@ -7,19 +8,23 @@
             font-family: Quentin;
             src: url("font/Quentin.otf") format("opentype");
         }
+
         @font-face {
             font-family: Quentin;
             font-weight: bold;
             src: url("font/Quentin.otf") format("opentype");
         }
+
         body {
             background-color: black;
         }
+
         .container {
             position: relative;
             width: 100%;
             height: 100%;
         }
+
         .image {
             position: absolute;
             left: 0;
@@ -27,70 +32,77 @@
             width: 612px;
             height: 827px;
         }
+
         .text {
             position: absolute;
             left: 360px;
             top: 400px;
         }
+
         a.song {
             text-decoration: none;
-            font-family: Quentin,cursive;
+            font-family: Quentin, cursive;
             font-size: xx-large;
             color: white;
         }
+
         a.song:hover {
             text-decoration: none;
         }
+
         ul {
             list-style-type: none;
         }
+
         .control {
             color: white;
             width: 36px;
-            height:48px;
+            height: 48px;
             font-size: 18pt;
             cursor: pointer;
         }
+
         .player {}
     </style>
     <title>dozem</title>
 </head>
+
 <body>
-<div class="container">
-    <img class="image" src="img/ghost-cross.png" alt="Image" />
-    <div class="text">
-        <ul>
-            <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play"></i>
-                    <audio class="audio-player" src="assets/SechsAchtel-bright.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">SixEight</a>
-                </span>
-            </li>
-            <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play"></i>
-                    <audio class="audio-player" src="assets/MasterDoom-bright.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">MasterOfDoom</a>
-                </span>
-            </li>
-            <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play"></i>
-                    <audio class="audio-player" src="assets/DyingDrums-bright2.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">DyingDrums</a>
-                </span>
-            </li>
-            <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play"></i>
-                    <audio class="audio-player" src="assets/Cool80z.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">Cool80z</a>
-                </span>
-            </li>
-        </ul>
+    <div class="container">
+        <img class="image" src="img/ghost-cross.png" alt="Image" />
+        <div class="text">
+            <ul>
+                <li>
+                    <span onclick="audioPlayPause(this)" class="player">
+                        <i class="control glyphicon glyphicon-play"></i>
+                        <audio class="audio-player" src="assets/SechsAchtel-bright.m4a" preload="auto"></audio>
+                        <a class="song" href="javascript:void(0);">SixEight</a>
+                    </span>
+                </li>
+                <li>
+                    <span onclick="audioPlayPause(this)" class="player">
+                        <i class="control glyphicon glyphicon-play"></i>
+                        <audio class="audio-player" src="assets/MasterDoom-bright.m4a" preload="auto"></audio>
+                        <a class="song" href="javascript:void(0);">MasterOfDoom</a>
+                    </span>
+                </li>
+                <li>
+                    <span onclick="audioPlayPause(this)" class="player">
+                        <i class="control glyphicon glyphicon-play"></i>
+                        <audio class="audio-player" src="assets/DyingDrums-bright2.m4a" preload="auto"></audio>
+                        <a class="song" href="javascript:void(0);">DyingDrums</a>
+                    </span>
+                </li>
+                <li>
+                    <span onclick="audioPlayPause(this)" class="player">
+                        <i class="control glyphicon glyphicon-play"></i>
+                        <audio class="audio-player" src="assets/Cool80z.m4a" preload="auto"></audio>
+                        <a class="song" href="javascript:void(0);">Cool80z</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 </body>
 
 <script>
@@ -120,5 +132,5 @@
         }
     }
 </script>
-</html>
 
+</html>
