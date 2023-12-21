@@ -134,6 +134,7 @@
         if (audio.paused) {
             icon.className = "control glyphicon glyphicon-stop";
             audio.play();
+            audio.onended = () => { icon.className = "control glyphicon glyphicon-play"; }
         } else {
             stopAudio(object);
         }
