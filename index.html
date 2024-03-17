@@ -36,28 +36,28 @@
         .text {
             position: absolute;
             left: 360px;
-            top: 400px;
+            top: 420px;
         }
 
         a.song {
             text-decoration: none;
             font-family: Quentin, cursive;
             font-size: large;
-            color: white;
+            color: #c0c0d0;
         }
 
         a.song:hover {
             text-decoration: none;
         }
 
-        a.featuredsong {
+        a.featured-song {
             text-decoration: none;
             font-family: Quentin, cursive;
             font-size: xx-large;
             color: white;
         }
 
-        a.featuredsong:hover {
+        a.featured-song:hover {
             text-decoration: none;
         }
 
@@ -66,10 +66,10 @@
         }
 
         .control {
-            color: white;
-            width: 36px;
-            height: 48px;
-            font-size: 18pt;
+            color: #c0c0d0;
+            width: 32px;
+            height: 36px;
+            font-size: 12pt;
             cursor: pointer;
         }
 
@@ -85,13 +85,27 @@
             <ul>
                 <li>
                     <span onclick="audioPlayPause(this)" class="player">
+<<<<<<< HEAD
                         <i class="control glyphicon glyphicon-play"></i>
                         <audio class="audio-player" src="assets/HellBrawl.mp3" preload="auto"></audio>
                         <a class="featuredsong" href="javascript:void(0);">HellBrawl</a>
+=======
+                        <i class="control glyphicon glyphicon-play" style="color: white; width: 36px; height: 48px; font-size: 18pt;"></i>
+                        <audio class="audio-player" src="assets/HellBrawl.m4a" preload="auto"></audio>
+                        <a class="featured-song" href="javascript:void(0);">HellBrawl</a>
+>>>>>>> 4475a5e8b36dd520eab8f1c1e5af5d09ef200b07
                     </span>
                 </li>
             </ul>
+
             <ul>
+                <li style="font-size: xx-small">
+                    <br>&nbsp;
+                </li>
+                <li>
+                    <a class="song">Old Songs</a>
+                    <br>&nbsp;
+                </li>
                 <li>
                     <span onclick="audioPlayPause(this)" class="player">
                         <i class="control glyphicon glyphicon-play"></i>
