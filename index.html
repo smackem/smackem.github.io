@@ -42,11 +42,22 @@
         a.song {
             text-decoration: none;
             font-family: Quentin, cursive;
-            font-size: xx-large;
+            font-size: large;
             color: white;
         }
 
         a.song:hover {
+            text-decoration: none;
+        }
+
+        a.featuredsong {
+            text-decoration: none;
+            font-family: Quentin, cursive;
+            font-size: xx-large;
+            color: white;
+        }
+
+        a.featuredsong:hover {
             text-decoration: none;
         }
 
@@ -71,6 +82,15 @@
     <div class="container">
         <img class="image" src="img/ghost-cross.png" alt="Image" />
         <div class="text">
+            <ul>
+                <li>
+                    <span onclick="audioPlayPause(this)" class="player">
+                        <i class="control glyphicon glyphicon-play"></i>
+                        <audio class="audio-player" src="assets/HellBrawl.m4a" preload="auto"></audio>
+                        <a class="featuredsong" href="javascript:void(0);">HellBrawl</a>
+                    </span>
+                </li>
+            </ul>
             <ul>
                 <li>
                     <span onclick="audioPlayPause(this)" class="player">
@@ -112,13 +132,6 @@
                         <i class="control glyphicon glyphicon-play"></i>
                         <audio class="audio-player" src="assets/RingLortB.m4a" preload="auto"></audio>
                         <a class="song" href="javascript:void(0);">RingLort</a>
-                    </span>
-                </li>
-                <li>
-                    <span onclick="audioPlayPause(this)" class="player">
-                        <i class="control glyphicon glyphicon-play"></i>
-                        <audio class="audio-player" src="assets/HellBrawl.m4a" preload="auto"></audio>
-                        <a class="song" href="javascript:void(0);">HellBrawl</a>
                     </span>
                 </li>
             </ul>
