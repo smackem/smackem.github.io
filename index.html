@@ -36,14 +36,14 @@
         .text {
             position: absolute;
             left: 360px;
-            top: 400px;
+            top: 420px;
         }
 
         a.song {
             text-decoration: none;
             font-family: Quentin, cursive;
             font-size: large;
-            color: white;
+            color: #c0c0d0;
         }
 
         a.song:hover {
@@ -66,18 +66,10 @@
         }
 
         .control {
-            color: white;
+            color: #c0c0d0;
             width: 32px;
             height: 36px;
             font-size: 12pt;
-            cursor: pointer;
-        }
-
-        .featured-control {
-            color: white;
-            width: 36px;
-            height: 48px;
-            font-size: 18pt;
             cursor: pointer;
         }
 
@@ -93,7 +85,7 @@
             <ul>
                 <li>
                     <span onclick="audioPlayPause(this)" class="player">
-                        <i class="featured-control glyphicon glyphicon-play"></i>
+                        <i class="control glyphicon glyphicon-play" style="color: white; width: 36px; height: 48px; font-size: 18pt;"></i>
                         <audio class="audio-player" src="assets/HellBrawl.m4a" preload="auto"></audio>
                         <a class="featured-song" href="javascript:void(0);">HellBrawl</a>
                     </span>
@@ -101,7 +93,7 @@
             </ul>
 
             <ul>
-                <li>
+                <li style="font-size: xx-small">
                     <br>&nbsp;
                 </li>
                 <li>
