@@ -17,6 +17,9 @@
 
         body {
             background-color: black;
+            color: #c0c0d0;
+            font-family: Consolas, monospace;
+            font-size: large;
         }
 
         .container {
@@ -29,21 +32,27 @@
             position: absolute;
             left: 0;
             top: 10px;
-            width: 612px;
-            height: 827px;
+            width: 495px;
+            height: 1024px;
+        }
+        
+        .logo {
+            position: absolute;
+            left: 160px;
+            top: 120px;
         }
 
         .text {
             position: absolute;
-            left: 360px;
-            top: 420px;
+            left: 320px;
+            top: 470px;
         }
 
         a.song {
             text-decoration: none;
             font-family: Quentin, cursive;
             font-size: large;
-            color: #c0c0d0;
+            color: white;
         }
 
         a.song:hover {
@@ -56,9 +65,25 @@
             font-size: xx-large;
             color: white;
         }
-
         a.featured-song:hover {
             text-decoration: none;
+        }
+
+        a.expander {
+            text-decoration: none;
+            font-family: Quentin, cursive;
+            font-size: large;
+            color: white;
+            cursor: pointer;
+        }
+        a.expander:hover {
+            text-decoration: underline;
+        }
+
+        .cursive {
+            font-family: Quentin, cursive;
+            color: white;
+            font-size: large;
         }
 
         ul {
@@ -72,6 +97,10 @@
             font-size: 12pt;
             cursor: pointer;
         }
+        
+        a.download {
+            color: #89c5cf;
+        }
 
         .player {}
     </style>
@@ -80,7 +109,8 @@
 
 <body>
 <div class="container">
-    <img class="image" src="img/ghost-cross.png" alt="Image" />
+    <img class="image" src="img/ghost-gradient.png" alt="Image" />
+    <img class="logo" src="img/dozem.png" alt="logo" />
     <div class="text">
         <ul>
             <li>
@@ -89,6 +119,14 @@
                     <audio class="audio-player" src="assets/HellBrawl.mp3" preload="auto"></audio>
                     <a class="featured-song" href="javascript:void(0);">HellBrawl</a>
                 </span>
+                <br />
+                <span style="padding-left: 36px; padding-bottom: 30px">
+                    <a href="assets/HellBrawl.mp3" class="download">download</a>
+                    |
+                    tuning: b e a d f# b
+                </span>
+                <br />
+                &nbsp;
             </li>
             <li>
                 <span onclick="audioPlayPause(this)" class="player">
@@ -96,51 +134,68 @@
                     <audio class="audio-player" src="assets/EightEleven.m4a" preload="auto"></audio>
                     <a class="featured-song" href="javascript:void(0);">11/8</a>
                 </span>
+                <br />
+                <span style="padding-left: 36px; padding-bottom: 30px">
+                    <a href="assets/EightEleven.m4a" class="download">download</a>
+                    |
+                    tuning: b e a d f# b
+                </span>
+                <br />
+                &nbsp;
             </li>
         </ul>
 
+
+        <p style="font-size: xx-small">
+            <br>&nbsp;
+        </p>
+
         <ul>
-            <li style="font-size: xx-small">
-                <br>&nbsp;
+            <li>
+                <span class="cursive">Contact:&nbsp;</span>
+                <a class="download" href="mailto: doom.dozem@outlook.com">doom.dozem@outlook.com</a>
             </li>
             <li>
-                <a class="song">Old Songs</a>
-                <br>&nbsp;
-            </li>
-            <li>
+                <details>
+                    <summary><a class="expander">Archived Songs</a></summary>
+                    <ul>
+                        <li>
                 <span onclick="audioPlayPause(this)" class="player">
                     <i class="control glyphicon glyphicon-play"></i>
                     <audio class="audio-player" src="assets/MasterDoom-bright.m4a" preload="auto"></audio>
                     <a class="song" href="javascript:void(0);">MasterOfDoom</a>
                 </span>
-            </li>
-            <li>
+                        </li>
+                        <li>
                 <span onclick="audioPlayPause(this)" class="player">
                     <i class="control glyphicon glyphicon-play"></i>
                     <audio class="audio-player" src="assets/Cool80z.m4a" preload="auto"></audio>
                     <a class="song" href="javascript:void(0);">Cool80z</a>
                 </span>
-            </li>
-            <li>
+                        </li>
+                        <li>
                 <span onclick="audioPlayPause(this)" class="player">
                     <i class="control glyphicon glyphicon-play"></i>
                     <audio class="audio-player" src="assets/Xmas666-full.m4a" preload="auto"></audio>
                     <a class="song" href="javascript:void(0);">Xmas666</a>
                 </span>
-            </li>
-            <li>
+                        </li>
+                        <li>
                 <span onclick="audioPlayPause(this)" class="player">
                     <i class="control glyphicon glyphicon-play"></i>
                     <audio class="audio-player" src="assets/DyingDrumsCB.m4a" preload="auto"></audio>
                     <a class="song" href="javascript:void(0);">DyingDrums</a>
                 </span>
-            </li>
-            <li>
+                        </li>
+                        <li>
                 <span onclick="audioPlayPause(this)" class="player">
                     <i class="control glyphicon glyphicon-play"></i>
                     <audio class="audio-player" src="assets/RingLortB.m4a" preload="auto"></audio>
                     <a class="song" href="javascript:void(0);">RingLort</a>
                 </span>
+                        </li>
+                    </ul>
+                </details>
             </li>
         </ul>
     </div>
