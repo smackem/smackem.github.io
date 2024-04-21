@@ -102,6 +102,29 @@
             color: #89c5cf;
         }
 
+        summary  {
+            list-style: none;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        details ul {
+            opacity: 0;
+        }
+
+        details[open] ul {
+            animation: fadeIn .75s linear forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         .player {}
     </style>
     <title>dozem</title>
