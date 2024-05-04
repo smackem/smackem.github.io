@@ -16,10 +16,11 @@
         }
         
         html {
-            width: 600px;
+            width: 500px;
         }
 
         body {
+            width: 600px;
             background-color: black;
             color: #c0c0d0;
             font-family: Consolas, monospace;
@@ -96,11 +97,16 @@
         }
 
         .control {
-            color: #c0c0d0;
             width: 32px;
             height: 36px;
             font-size: 12pt;
             cursor: pointer;
+        }
+        
+        .featured-control {
+            width: 36px;
+            height: 48px;
+            font-size: 18pt;
         }
         
         a.download {
@@ -132,21 +138,44 @@
 
         .player {}
 
+        .song-actions {
+            padding-left: 36px;
+            padding-bottom: 30px;
+        }
+
         @media only screen and (max-width: 1024px) {
             body {
                 font-size: xx-large;
             }
             a.song {
-                font-size: xx-large;
+                font-size: 40pt;
+            }
+            a.featured-song {
+                font-size: 48pt;
             }
             a.expander:hover {
                 text-decoration: none;
             }
             .cursive {
-                font-size: xx-large;
+                font-size: 40pt;
             }
             a.expander {
-                font-size: xx-large;
+                font-size: 40pt;
+            }
+            .control {
+                width: 64px;
+                height: 72px;
+                font-size: 24pt;
+            }
+            .featured-control {
+                color: white;
+                width: 72px;
+                height: 96px;
+                font-size: 36pt;
+            }
+            .song-actions {
+                padding-left: 80px;
+                padding-bottom: 30px;
             }
         }
     </style>
@@ -164,12 +193,12 @@
         <ul>
             <li>
                 <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play" style="color: white; width: 36px; height: 48px; font-size: 18pt;"></i>
+                    <i class="control glyphicon glyphicon-play featured-control"></i>
                     <audio class="audio-player" src="assets/HellBrawl.mp3" preload="auto"></audio>
                     <a class="featured-song" href="javascript:void(0);">HellBrawl</a>
                 </span>
                 <br />
-                <span style="padding-left: 36px; padding-bottom: 30px">
+                <span class="song-actions">
                     <a href="assets/HellBrawl.mp3" class="download">download</a>
                     |
                     <a href="assets/HellBrawl-tabs.txt" class="download" target="_blank" rel="noreferrer noopener">tabs</a>
@@ -179,12 +208,12 @@
             </li>
             <li>
                 <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play" style="color: white; width: 36px; height: 48px; font-size: 18pt;"></i>
+                    <i class="control glyphicon glyphicon-play featured-control"></i>
                     <audio class="audio-player" src="assets/EightEleven.m4a" preload="auto"></audio>
                     <a class="featured-song" href="javascript:void(0);">11/8</a>
                 </span>
                 <br />
-                <span style="padding-left: 36px; padding-bottom: 30px">
+                <span class="song-actions">
                     <a href="assets/EightEleven.m4a" class="download">download</a>
                     |
                     <a href="assets/EightEleven-tabs.txt" class="download" target="_blank" rel="noreferrer noopener">tabs</a>
@@ -206,27 +235,27 @@
             </li>
             <li>
                 <details>
-                    <summary><a class="expander cursive">Alternate Song Versions</a></summary>
+                    <summary><a class="expander cursive">Tunings</a></summary>
                     <ul>
                         <li>
                         <span onclick="audioPlayPause(this)" class="player">
                             <i class="control glyphicon glyphicon-play"></i>
                             <audio class="audio-player" src="assets/HellBrawl-a.m4a" preload="auto"></audio>
-                            <a class="song" href="javascript:void(0);">HellBrawl (A-tuning)</a>
+                            <a class="song" href="javascript:void(0);">HellBrawl (A)</a>
                         </span>
                         </li>
                         <li>
                         <span onclick="audioPlayPause(this)" class="player">
                             <i class="control glyphicon glyphicon-play"></i>
                             <audio class="audio-player" src="assets/HellBrawl-cs.m4a" preload="auto"></audio>
-                            <a class="song" href="javascript:void(0);">HellBrawl (C#-tuning)</a>
+                            <a class="song" href="javascript:void(0);">HellBrawl (C#)</a>
                         </span>
                         </li>
                         <li>
                         <span onclick="audioPlayPause(this)" class="player">
                             <i class="control glyphicon glyphicon-play"></i>
                             <audio class="audio-player" src="assets/EightEleven-cs.m4a" preload="auto"></audio>
-                            <a class="song" href="javascript:void(0);">11/8 (C#-tuning)</a>
+                            <a class="song" href="javascript:void(0);">11/8 (C#)</a>
                         </span>
                         </li>
                     </ul>
@@ -234,13 +263,13 @@
             </li>
             <li>
                 <details>
-                    <summary><a class="expander">Archived Songs</a></summary>
+                    <summary><a class="expander">Archive</a></summary>
                     <ul>
                         <li>
                 <span onclick="audioPlayPause(this)" class="player">
                     <i class="control glyphicon glyphicon-play"></i>
                     <audio class="audio-player" src="assets/MasterDoom-bright.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">MasterOfDoom</a>
+                    <a class="song" href="javascript:void(0);">Master Of Doom</a>
                 </span>
                         </li>
                         <li>
@@ -261,7 +290,7 @@
                 <span onclick="audioPlayPause(this)" class="player">
                     <i class="control glyphicon glyphicon-play"></i>
                     <audio class="audio-player" src="assets/DyingDrumsCB.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">DyingDrums</a>
+                    <a class="song" href="javascript:void(0);">Dying Drums</a>
                 </span>
                         </li>
                         <li>
@@ -283,7 +312,7 @@
     function stopAudio(player) {
         let audio = player.querySelector(".audio-player");
         let icon = player.querySelector(".control");
-        icon.className = "control glyphicon glyphicon-play";
+        icon.className = icon.className.replace("glyphicon-stop", "glyphicon-play");
         audio.pause();
         audio.currentTime = 0;
     }
@@ -299,9 +328,9 @@
         let audio = object.querySelector(".audio-player");
         let icon = object.querySelector(".control");
         if (audio.paused) {
-            icon.className = "control glyphicon glyphicon-stop";
+            icon.className = icon.className.replace("glyphicon-play", "glyphicon-stop");
             audio.play();
-            audio.onended = () => { icon.className = "control glyphicon glyphicon-play"; }
+            audio.onended = () => { icon.className = icon.className.replace("glyphicon-stop", "glyphicon-play") }
         } else {
             stopAudio(object);
         }
