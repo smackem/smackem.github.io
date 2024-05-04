@@ -14,6 +14,10 @@
             font-weight: bold;
             src: url("font/Quentin.otf") format("opentype");
         }
+        
+        html {
+            width: 600px;
+        }
 
         body {
             background-color: black;
@@ -24,7 +28,7 @@
 
         .container {
             position: relative;
-            width: 100%;
+            width: 700px;
             height: 100%;
         }
 
@@ -35,7 +39,7 @@
             width: 495px;
             height: 1024px;
         }
-        
+
         .logo {
             position: absolute;
             left: 60px;
@@ -126,6 +130,24 @@
         }
 
         .player {}
+
+        @media only screen and (max-width: 1024px) {
+            body {
+                font-size: x-large;
+            }
+            a.song {
+                font-size: x-large;
+            }
+            a.expander:hover {
+                text-decoration: none;
+            }
+            .cursive {
+                font-size: x-large;
+            }
+            a.expander {
+                font-size: x-large;
+            }
+        }
     </style>
     <title>dozem</title>
 </head>
@@ -183,7 +205,7 @@
             </li>
             <li>
                 <details>
-                    <summary><a class="expander">Alternate Song Versions</a></summary>
+                    <summary><a class="expander cursive">Alternate Song Versions</a></summary>
                     <ul>
                         <li>
                         <span onclick="audioPlayPause(this)" class="player">
