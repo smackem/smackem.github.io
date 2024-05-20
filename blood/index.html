@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    @font-face {
+      font-family: Quentin;
+      src: url("../font/Quentin.otf") format("opentype");
+    }
+
+    @font-face {
+      font-family: Quentin;
+      font-weight: bold;
+      src: url("../font/Quentin.otf") format("opentype");
+    }
+
+    html {
+      width: 700px;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      font-family: Consolas, monospace;
+      font-size: large;
+    }
+
+    .container {
+      background-color: blue;
+      position: relative;
+      width: 800px;
+      height: 100%;
+    }
+
+    .image {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 489px;
+      height: 1024px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 110px;
+        top: 50px;
+        width: 255px;
+        height: 76px;
+        background-image: url("img/dozem-blood.png");
+    }
+
+    .text {
+      position: absolute;
+      left: 60px;
+      top: 180px;
+    }
+
+    a.featured-song {
+      text-decoration: none;
+      font-family: Quentin, cursive;
+      font-size: xx-large;
+      color: white;
+    }
+    a.featured-song:hover {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .control {
+      width: 32px;
+      height: 36px;
+      font-size: 12pt;
+      cursor: pointer;
+    }
+
+    .featured-control {
+      width: 36px;
+      height: 48px;
+      font-size: 18pt;
+    }
+
+    summary  {
+      list-style: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    details ul {
+      opacity: 0;
+    }
+
+    details[open] ul {
+      animation: fadeIn .75s linear forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .player {}
+
+    @media only screen and (max-width: 1024px) {
+      body {
+        font-size: xx-large;
+      }
+      a.featured-song {
+        font-size: 48pt;
+      }
+      .control {
+        width: 64px;
+        height: 72px;
+        font-size: 24pt;
+      }
+      .featured-control {
+        color: white;
+        width: 72px;
+        height: 96px;
+        font-size: 36pt;
+      }
+    }
+  </style>
+  <title>dozem</title>
+</head>
+
+<body>
+<div class="container">
+  <img class="image" src="img/ghost2.jpg" alt="Image" />
+  <div class="logo">&nbsp;</div>
+
+  <div class="text">
+    <ul>
+      <li>
+        <span onclick="audioPlayPause(this)" class="player">
+            <i class="control glyphicon glyphicon-play featured-control"></i>
+            <audio class="audio-player" src="assets/BurningSparrows.m4a" preload="auto"></audio>
+            <a class="featured-song" href="javascript:void(0);">Burning Sparrows</a>
+        </span>
+      </li>
+      <li>
+        <span onclick="audioPlayPause(this)" class="player">
+            <i class="control glyphicon glyphicon-play featured-control"></i>
+            <audio class="audio-player" src="assets/Picky.m4a" preload="auto"></audio>
+            <a class="featured-song" href="javascript:void(0);">Picky</a>
+        </span>
+      </li>
+      <li>
+        <span onclick="audioPlayPause(this)" class="player">
+            <i class="control glyphicon glyphicon-play featured-control"></i>
+            <audio class="audio-player" src="assets/Tappst.m4a" preload="auto"></audio>
+            <a class="featured-song" href="javascript:void(0);">Tappst</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+
+<script>
+  function stopAudio(player) {
+    let audio = player.querySelector(".audio-player");
+    let icon = player.querySelector(".control");
+    icon.className = icon.className.replace("glyphicon-stop", "glyphicon-play");
+    audio.pause();
+    audio.currentTime = 0;
+  }
+
+  function audioPlayPause(object) {
+    const players = document.getElementsByClassName("player");
+    for (let i = 0; i < players.length; i++) {
+      const player = players[i];
+      if (player === object) continue;
+      stopAudio(player);
+    }
+
+    let audio = object.querySelector(".audio-player");
+    let icon = object.querySelector(".control");
+    if (audio.paused) {
+      icon.className = icon.className.replace("glyphicon-play", "glyphicon-stop");
+      audio.play();
+      audio.onended = () => { icon.className = icon.className.replace("glyphicon-stop", "glyphicon-play") }
+    } else {
+      stopAudio(object);
+    }
+  }
+</script>
+
+</html>
