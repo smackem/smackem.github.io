@@ -70,6 +70,13 @@
       list-style-type: none;
     }
 
+    .song-info {
+        padding-left: 54px;
+      font-family: Quentin, cursive;
+      font-size: large;
+      color: white;
+    }
+
     .control {
       width: 32px;
       height: 36px;
@@ -121,9 +128,14 @@
       <li>
         <span onclick="audioPlayPause(this)" class="player">
             <i class="control glyphicon glyphicon-play featured-control"></i>
-            <audio class="audio-player" src="assets/BurningSparrows-feat-Infektomos.m4a" preload="auto"></audio>
+            <audio class="audio-player" src="assets/BurningSparrows-feat-Infektomos.mp3" preload="auto"></audio>
             <a class="featured-song" href="javascript:void(0);">Burning Sparrows</a>
         </span>
+        <br />
+        <span class="song-info">
+            feat. Infektomos
+        </span>
+        <br />&nbsp;
       </li>
       <li>
         <span onclick="audioPlayPause(this)" class="player">
