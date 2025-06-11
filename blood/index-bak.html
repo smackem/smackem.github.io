@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dozem Blood</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .tile-container {
+            position: relative;
+            width: 480px;
+            height: 480px;
+            border-width: 1px;
+            border-style: solid;
+        }
+        .tile-container img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        img.gray {
+            object-fit: cover;
+            filter: grayscale(100%);
+            width: 100%;
+            height: 100%;
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 18pt;
+            font-weight: normal;
+        }
+        .player {}
+        a.featured-song {
+            font-family: monospace;
+            text-decoration: none;
+            color: white;
+            vertical-align: middle;
+        }
+        .control {
+            width: 32px;
+            height: 36px;
+            cursor: pointer;
+            display: inline;
+            margin-right: 8px;
+            vertical-align: text-bottom;
+        }
+
+        .song-info {
+            padding-left: 32px;
+            font-family: monospace;
+            font-size: large;
+        }
+        a.infektomos {
+            text-decoration: none;
+            color: #51c405;
+        }
+        a.infektomos:hover {
+            text-decoration: none;
+        }
+        .title {
+            font-size: 24pt;
+            font-family: monospace;
+            font-weight: normal;
+            color: white;
+        }
+        .header-footer {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 12px;
+            padding-top: 12px;
+        }
+        .footer {
+            font-size: 12pt;
+            font-family: monospace;
+            font-weight: normal;
+            padding-top: 40px;
+        }
+        .footer a {
+            color: #89c5cf;
+        }
+        @media only screen and (max-width: 414px) {
+            .title {
+                font-size: 16pt;
+            }
+            .tile-container {
+                width: 320px;
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header-footer">
+    <p class="title">doom · dozem · blood</p>
+</div>
+
+<div class="gallery">
+    <div class="tile-container" style="border-color: #242b32">
+        <img src="img/DeathRider2.JPG" alt="Image 8">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/DeathRider-master-150bpm-instrumental.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Death Rider 003</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #5f0f0d">
+        <img src="img/GoreFields.webp" alt="Image 8">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/GoreFields.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Gore Fields 001</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #3e2737">
+        <img src="img/HellBrawl.webp" alt="Image 8">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/HellBrawl.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Hell Brawl 001</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #394355">
+        <img src="img/Liars.webp" alt="Image 8">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/Liars.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Liars 002</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #563020">
+        <img src="img/GreatHall3.webp" alt="Image 8">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/GreatHall.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Great Hall</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #1f2b44">
+        <img src="img/CrossOfHorns2.webp" alt="Image 2">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/CrossOfHorns.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Cross of Horns</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #392e2a">
+        <img src="img/DoomGroom.JPG" alt="Image 5">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/DoomGroom.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Doom Groom</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #38333d">
+        <img src="img/FlightCall7.WEBP" alt="Image 3">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/FlightCall.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Flight Call</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #3c3e3a">
+        <img src="img/ArchNemesis4.JPG" alt="Image 8">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/ArchNemesis.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Arch Nemesis</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #3a3934">
+        <img src="img/ClosedFist3.WEBP" alt="Image 1">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/ClosedFist.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Closed Fist</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #7e8381">
+        <img src="img/WingDing2.jpg" alt="Image 6">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/WingDing.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Wing Ding</a>
+            </span>
+        </div>
+    </div>
+    <div class="tile-container" style="border-color: #5a4c5d">
+        <img src="img/ghost52.jpg" alt="Image 8">
+        <div class="overlay">
+            <span onclick="audioPlayPause(this)" class="player">
+                <i class="control glyphicon glyphicon-play featured-control"></i>
+                <audio class="audio-player" src="assets/DeadAgain.m4a" preload="auto"></audio>
+                <a class="featured-song" href="javascript:void(0);">Dead Again</a>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="header-footer">
+    <div class="footer">
+        &copy; 2024
+        <a href="mailto:doom.dozem@outlook.com">doom.dozem@outlook.com</a>
+        <a href="archive.html" target="_blank">archive</a>
+    </div>
+</div>
+
+</body>
+
+<script>
+    function stopAudio(player) {
+        let audio = player.querySelector(".audio-player");
+        let icon = player.querySelector(".control");
+        icon.className = icon.className.replace("glyphicon-stop", "glyphicon-play");
+        audio.pause();
+        audio.currentTime = 0;
+    }
+
+    function audioPlayPause(object) {
+        const players = document.getElementsByClassName("player");
+        for (let i = 0; i < players.length; i++) {
+            const player = players[i];
+            if (player === object) continue;
+            stopAudio(player);
+        }
+
+        let audio = object.querySelector(".audio-player");
+        let icon = object.querySelector(".control");
+        if (audio.paused) {
+            icon.className = icon.className.replace("glyphicon-play", "glyphicon-stop");
+            audio.play();
+            audio.onended = () => { icon.className = icon.className.replace("glyphicon-stop", "glyphicon-play") }
+        } else {
+            stopAudio(object);
+        }
+
+    }
+</script>
+</html>
