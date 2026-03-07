@@ -1,0 +1,23 @@
+[
+  {
+    "id": "song-1",
+    "title": "Abyssal Echoes",
+    "audio": "assets/abyssal_echoes.mp3",
+    "image": "assets/abyssal_echoes.jpg",
+    "description": "A deep dive into the void of sound and fury."
+  },
+  {
+    "id": "song-2",
+    "title": "Iron Resolve",
+    "audio": "assets/iron_resolve.mp3",
+    "image": "assets/iron_resolve.jpg",
+    "description": "Unwavering strength translated into thunderous riffs."
+  },
+  {
+    "id": "song-3",
+    "title": "Shadow Descent",
+    "audio": "assets/shadow_descent.mp3",
+    "image": "assets/shadow_descent.jpg",
+    "description": "The darkness falls, and only the rhythm remains."
+  }
+]
