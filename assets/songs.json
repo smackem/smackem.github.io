@@ -1,0 +1,23 @@
+[
+  {
+    "id": "song-1",
+    "title": "Overdozem",
+    "audio": "assets/Overdozem-172bpm-master.mp3",
+    "image": "assets/Overdozem.png",
+    "description": "A high-octane heavy metal journey that pushes the limits of speed and intensity."
+  },
+  {
+    "id": "song-2",
+    "title": "Hell Brawl",
+    "audio": "assets/HellBrawl-116bpm-master.mp3",
+    "image": "assets/HellBrawl.png",
+    "description": "A thunderous clash of riffs and rhythms that echoes the chaos of a true underworld battle."
+  },
+  {
+    "id": "song-3",
+    "title": "Selling Lies",
+    "audio": "assets/SellingLies-master.mp3",
+    "image": "assets/SellingLies.png",
+    "description": "A powerful anthem that unmasks the deception and greed of the modern world with crushing sound."
+  }
+]

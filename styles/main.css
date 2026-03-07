@@ -1,0 +1,120 @@
+/* Global Styles */
+body {
+    background-color: #000;
+    color: #eee;
+    font-family: 'Courier New', Courier, monospace; /* Typewriter-like font */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 0;
+}
+
+#logo {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Song List styles (for Milestone 2) */
+.song-list {
+    list-style: none;
+    padding: 0;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px 5px 15px;
+    border-bottom: 1px solid #222;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.song-item:first-child {
+    border-top: 1px solid #222;
+}
+
+.song-item:hover {
+    background-color: #0a0a0a;
+}
+
+.song-item.selected {
+    background-color: #111;
+    border-color: #444;
+}
+
+.song-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-right: 20px;
+    background-color: #111;
+}
+
+.song-title {
+    flex-grow: 1;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.song-controls {
+    border-top: 1px dashed #333;
+    padding-top: 15px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+
+.song-item.selected .song-controls {
+    max-height: 200px; /* Adjust based on content */
+    opacity: 1;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+/* Custom range styling for dark theme */
+input[type=range].form-range::-webkit-slider-runnable-track {
+    background-color: #333;
+}
+
+input[type=range].form-range::-webkit-slider-thumb {
+    background-color: #eee;
+}
+
+footer {
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    border-top: 1px solid #444;
+}
+
+.footer-player {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.volume-icon {
+    font-size: 1.2rem;
+}
+
+#current-song-info {
+    font-style: italic;
+    min-width: 200px;
+}
+
+a {
+    color: #eee;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}

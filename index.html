@@ -1,386 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <style>
-        @font-face {
-            font-family: Quentin;
-            src: url("font/Quentin.otf") format("opentype");
-        }
-
-        @font-face {
-            font-family: Quentin;
-            font-weight: bold;
-            src: url("font/Quentin.otf") format("opentype");
-        }
-        
-        html {
-            width: 700px;
-        }
-
-        body {
-            background-color: black;
-            color: white;
-            font-family: Consolas, monospace;
-            font-size: large;
-        }
-
-        .container {
-            background-color: blue;
-            position: relative;
-            width: 800px;
-            height: 100%;
-        }
-
-        .image {
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 495px;
-            height: 1024px;
-        }
-
-        .logo {
-            position: absolute;
-            left: 60px;
-            top: 150px;
-            width: 266px;
-            height: 147px;
-            background-image: url("img/dozem.png");
-        }
-
-        .text {
-            position: absolute;
-            left: 250px;
-            top: 400px;
-        }
-
-        a.song {
-            text-decoration: none;
-            font-family: Quentin, cursive;
-            font-size: large;
-            color: white;
-        }
-
-        a.song:hover {
-            text-decoration: none;
-        }
-
-        a.featured-song {
-            text-decoration: none;
-            font-family: Quentin, cursive;
-            font-size: xx-large;
-            color: white;
-        }
-        a.featured-song:hover {
-            text-decoration: none;
-        }
-
-        a.expander {
-            text-decoration: none;
-            font-family: Quentin, cursive;
-            font-size: large;
-            color: white;
-            cursor: pointer;
-        }
-        a.expander:hover {
-            text-decoration: underline;
-        }
-
-        .cursive {
-            font-family: Quentin, cursive;
-            color: white;
-            font-size: large;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        .control {
-            width: 32px;
-            height: 36px;
-            font-size: 12pt;
-            cursor: pointer;
-        }
-        
-        .featured-control {
-            width: 36px;
-            height: 48px;
-            font-size: 18pt;
-        }
-        
-        a.download {
-            color: #89c5cf;
-        }
-
-        summary  {
-            list-style: none;
-        }
-        summary::-webkit-details-marker {
-            display: none;
-        }
-        details ul {
-            opacity: 0;
-        }
-
-        details[open] ul {
-            animation: fadeIn .75s linear forwards;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .player {}
-
-        .song-actions {
-            padding-left: 44px;
-            padding-bottom: 30px;
-        }
-
-        @media only screen and (max-width: 1024px) {
-            body {
-                font-size: xx-large;
-            }
-            a.song {
-                font-size: 40pt;
-            }
-            a.featured-song {
-                font-size: 48pt;
-            }
-            a.expander:hover {
-                text-decoration: none;
-            }
-            .cursive {
-                font-size: 40pt;
-            }
-            a.expander {
-                font-size: 40pt;
-            }
-            .control {
-                width: 64px;
-                height: 72px;
-                font-size: 24pt;
-            }
-            .featured-control {
-                color: white;
-                width: 72px;
-                height: 96px;
-                font-size: 36pt;
-            }
-            .song-actions {
-                padding-left: 80px;
-                padding-bottom: 30px;
-            }
-            .logo {
-                left: 10px;
-                width: 362px;
-                height: 200px;
-                background-image: url("img/dozem-l.png");
-            }
-        }
-    </style>
-    <title>dozem</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dozem - Heavy Metal</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-
 <body>
-<div class="container">
-    <img class="image" src="img/ghost-gradient.jpg" alt="Image" />
+    <header class="container text-center">
+        <div id="logo-container">
+            <img src="assets/dozem.png" alt="DOZEM Logo" id="logo" class="img-fluid">
+        </div>
+    </header>
 
-    <!-- https://www.fontspace.com/evil-sound-font-f81581 -->
-<!--    <img class="logo" src="img/dozem-l.png" alt="logo" />-->
-    <div class="logo">&nbsp;</div>
-
-    <div class="text">
-        <ul>
-            <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play featured-control"></i>
-                    <audio class="audio-player" src="assets/HellBrawl.mp3" preload="auto"></audio>
-                    <a class="featured-song" href="javascript:void(0);">HellBrawl</a>
-                </span>
-                <br />
-                <span class="song-actions">
-                    <a href="assets/HellBrawl.mp3" class="download">download</a>
-                    |
-                    <a href="assets/HellBrawl-tabs.txt" class="download" target="_blank" rel="noreferrer noopener">tabs</a>
-                </span>
-                <br />
-                &nbsp;
+    <main class="container">
+        <!-- Milestone 2: Song list placeholder -->
+        <ul class="song-list">
+            <li class="song-item">
+                <img src="https://placehold.co/90x90/111/eee?text=Song+1" alt="Song 1 Cover" class="song-image">
+                <span class="song-title">Song Title One</span>
+                <button class="btn btn-outline-light btn-sm">Play</button>
             </li>
-            <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play featured-control"></i>
-                    <audio class="audio-player" src="assets/EightEleven.m4a" preload="auto"></audio>
-                    <a class="featured-song" href="javascript:void(0);">11/8</a>
-                </span>
-                <br />
-                <span class="song-actions">
-                    <a href="assets/EightEleven.m4a" class="download">download</a>
-                    |
-                    <a href="assets/EightEleven-tabs.txt" class="download" target="_blank" rel="noreferrer noopener">tabs</a>
-                </span>
-                <br />
-                &nbsp;
+            <li class="song-item">
+                <img src="https://placehold.co/90x90/111/eee?text=Song+2" alt="Song 2 Cover" class="song-image">
+                <span class="song-title">Song Title Two</span>
+                <button class="btn btn-outline-light btn-sm">Play</button>
             </li>
-            <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play featured-control"></i>
-                    <audio class="audio-player" src="assets/CattleBattle.m4a" preload="auto"></audio>
-                    <a class="featured-song" href="javascript:void(0);">CattleBattle</a>
-                </span>
-                <br />
-                <span class="song-actions">
-                    <a href="assets/CattleBattle.m4a" class="download">download</a>
-                    |
-                    <a href="assets/CattleBattle-tabs.txt" class="download" target="_blank" rel="noreferrer noopener">tabs</a>
-                </span>
-                <br />
-                &nbsp;
-            </li>
-            <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play featured-control"></i>
-                    <audio class="audio-player" src="assets/DragonBeat.m4a" preload="auto"></audio>
-                    <a class="featured-song" href="javascript:void(0);">DragonBeat</a>
-                </span>
-                <br />
-                <span class="song-actions">
-                    <a href="assets/DragonBeat.m4a" class="download">download</a>
-                    |
-                    <a href="assets/DragonBeat-tabs.txt" class="download" target="_blank" rel="noreferrer noopener">tabs</a>
-                </span>
-                <br />
-                &nbsp;
+            <li class="song-item">
+                <img src="https://placehold.co/90x90/111/eee?text=Song+3" alt="Song 3 Cover" class="song-image">
+                <span class="song-title">Song Title Three</span>
+                <button class="btn btn-outline-light btn-sm">Play</button>
             </li>
         </ul>
+    </main>
 
+    <footer class="container py-2">
+        <div class="footer-player d-flex justify-content-center align-items-center gap-4 mb-2">
+            <div id="current-song-info" class="text-light small">Player idle</div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="volume-icon">&#128266;</span> <!-- Loudspeaker icon -->
+                <input type="range" id="footer-volume" class="form-range" style="width: 150px;" min="0" max="1" step="0.01" value="0.8">
+            </div>
+        </div>
+        <div class="text-center pt-2">
+            <a href="pages/about.html">About Dozem</a>
+            <p class="mt-3"><small>Copyright &copy; Dozem 2026</small></p>
+        </div>
+    </footer>
 
-        <p style="font-size: xx-small">
-            <br>&nbsp;
-        </p>
-
-        <ul>
-            <li>
-                <span class="cursive">Contact:&nbsp;</span>
-                <a class="download" href="mailto: doom.dozem@outlook.com">doom.dozem@outlook.com</a>
-            </li>
-            <li>
-                <details>
-                    <summary><a class="expander cursive">Tunings</a></summary>
-                    <ul>
-                        <li>
-                        <span onclick="audioPlayPause(this)" class="player">
-                            <i class="control glyphicon glyphicon-play"></i>
-                            <audio class="audio-player" src="assets/HellBrawl-a.m4a" preload="auto"></audio>
-                            <a class="song" href="javascript:void(0);">HellBrawl (A)</a>
-                        </span>
-                        </li>
-                        <li>
-                        <span onclick="audioPlayPause(this)" class="player">
-                            <i class="control glyphicon glyphicon-play"></i>
-                            <audio class="audio-player" src="assets/HellBrawl-cs.m4a" preload="auto"></audio>
-                            <a class="song" href="javascript:void(0);">HellBrawl (C#)</a>
-                        </span>
-                        </li>
-                        <li>
-                        <span onclick="audioPlayPause(this)" class="player">
-                            <i class="control glyphicon glyphicon-play"></i>
-                            <audio class="audio-player" src="assets/EightEleven-cs.m4a" preload="auto"></audio>
-                            <a class="song" href="javascript:void(0);">11/8 (C#)</a>
-                        </span>
-                        </li>
-                        <li>
-                        <span onclick="audioPlayPause(this)" class="player">
-                            <i class="control glyphicon glyphicon-play"></i>
-                            <audio class="audio-player" src="assets/CattleBattle-b.m4a" preload="auto"></audio>
-                            <a class="song" href="javascript:void(0);">CattleBattle (b)</a>
-                        </span>
-                        </li>
-                    </ul>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary><a class="expander">Archive</a></summary>
-                    <ul>
-                        <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play"></i>
-                    <audio class="audio-player" src="assets/MasterDoom-bright.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">Master Of Doom</a>
-                </span>
-                        </li>
-                        <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play"></i>
-                    <audio class="audio-player" src="assets/Cool80z.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">Cool80z</a>
-                </span>
-                        </li>
-                        <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play"></i>
-                    <audio class="audio-player" src="assets/Xmas666-full.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">Xmas666</a>
-                </span>
-                        </li>
-                        <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play"></i>
-                    <audio class="audio-player" src="assets/DyingDrumsCB.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">Dying Drums</a>
-                </span>
-                        </li>
-                        <li>
-                <span onclick="audioPlayPause(this)" class="player">
-                    <i class="control glyphicon glyphicon-play"></i>
-                    <audio class="audio-player" src="assets/RingLortB.m4a" preload="auto"></audio>
-                    <a class="song" href="javascript:void(0);">RingLort</a>
-                </span>
-                        </li>
-                    </ul>
-                </details>
-            </li>
-        </ul>
-    </div>
-</div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom Scripts -->
+    <script src="scripts/index.js"></script>
 </body>
-
-<script>
-    function stopAudio(player) {
-        let audio = player.querySelector(".audio-player");
-        let icon = player.querySelector(".control");
-        icon.className = icon.className.replace("glyphicon-stop", "glyphicon-play");
-        audio.pause();
-        audio.currentTime = 0;
-    }
-
-    function audioPlayPause(object) {
-        const players = document.getElementsByClassName("player");
-        for (let i = 0; i < players.length; i++) {
-            const player = players[i];
-            if (player === object) continue;
-            stopAudio(player);
-        }
-
-        let audio = object.querySelector(".audio-player");
-        let icon = object.querySelector(".control");
-        if (audio.paused) {
-            icon.className = icon.className.replace("glyphicon-play", "glyphicon-stop");
-            audio.play();
-            audio.onended = () => { icon.className = icon.className.replace("glyphicon-stop", "glyphicon-play") }
-        } else {
-            stopAudio(object);
-        }
-    }
-</script>
-
 </html>
