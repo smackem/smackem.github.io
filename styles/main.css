@@ -93,7 +93,12 @@ input[type=range].form-range::-webkit-slider-thumb {
 footer {
     padding: 0.5rem 0;
     margin-top: 1rem;
+}
+
+.footer-bottom {
     border-top: 1px solid #444;
+    margin-top: 1rem;
+    padding-top: 1rem;
 }
 
 .footer-player {
