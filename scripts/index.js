@@ -70,10 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function setupPlayer(songs) {
         const songItems = document.querySelectorAll('.song-item');
         const footerVolume = document.getElementById('footer-volume');
+        const volumeIcon = document.querySelector('.volume-icon');
         const currentSongInfo = document.getElementById('current-song-info');
 
         // Initial volume
         audioPlayer.volume = footerVolume.value;
+        updateVolumeIcon(footerVolume.value);
 
         songItems.forEach(item => {
             const playBtn = item.querySelector('.play-btn');
@@ -130,8 +132,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Footer volume control
         footerVolume.addEventListener('input', () => {
-            audioPlayer.volume = footerVolume.value;
+            const volume = parseFloat(footerVolume.value);
+            audioPlayer.volume = volume;
+            updateVolumeIcon(volume);
         });
+
+        /**
+         * Updates the volume icon based on volume level
+         * @param {number} volume 
+         */
+        function updateVolumeIcon(volume) {
+            if (!volumeIcon) return;
+            volumeIcon.className = 'volume-icon bi';
+            if (volume === 0) {
+                volumeIcon.classList.add('bi-volume-mute-fill');
+            } else if (volume < 0.5) {
+                volumeIcon.classList.add('bi-volume-down-fill');
+            } else {
+                volumeIcon.classList.add('bi-volume-up-fill');
+            }
+        }
 
         // Update seek slider smoothly
         function updateProgress() {
