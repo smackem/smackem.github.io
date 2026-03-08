@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSongId = null;
 
     // Fetch song data from JSON
-    fetch('assets/songs.json')
+    fetch('songs.json')
         .then(response => response.json())
         .then(songs => {
             renderSongs(songs);

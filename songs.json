@@ -1,0 +1,41 @@
+[
+  {
+    "id": "song-1",
+    "title": "Selling Lies (feat. Ilho Cho)",
+    "audio": "assets/SellingLies-master.mp3",
+    "image": "assets/SellingLies.png",
+    "description": "A powerful anthem that unmasks the deception and greed of the modern world with crushing sound."
+  },
+  {
+    "id": "song-2",
+    "title": "Victories (feat. Insane Divinity)",
+    "audio": "assets/Victories-v2.mp3",
+    "image": "assets/Victories.png",
+    "description": "A high-octane celebration of triumph, blending crushing riffs with an unyielding spirit of victory."
+  },
+  {
+    "id": "song-3",
+    "title": "Overdozem",
+    "audio": "assets/Overdozem-172bpm-master.mp3",
+    "image": "assets/Overdozem.png",
+    "description": "A high-octane heavy metal journey that pushes the limits of speed and intensity."
+  },
+  {
+    "id": "song-4",
+    "title": "Hell Brawl",
+    "audio": "assets/HellBrawl-116bpm-master.mp3",
+    "image": "assets/HellBrawl.png",
+    "description": "A thunderous clash of riffs and rhythms that echoes the chaos of a true underworld battle."
+  },
+  {
+    "id": "song-5",
+    "title": "Morphine Flight",
+    "audio": "assets/MorphineFlight-master-002.mp3",
+    "image": "assets/MorphineFlight.png",
+    "description": "A powerful and energetic riff that blends the power of psychedelics with the thrill of aerial maneuvers."
+  },
+  {
+    "id": "song-6",
+    "title": "Hammer of Hope"
+  }
+]
