@@ -9,13 +9,12 @@ body {
 
 header {
     text-align: center;
-    padding: 0;
 }
 
 #logo {
-    max-width: 300px;
+    max-width: 500px;
     height: auto;
-    margin-bottom: 0;
+    margin: 70px 0;
 }
 
 main {
