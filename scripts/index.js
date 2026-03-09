@@ -48,13 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="d-flex align-items-center w-100">
                 <img src="${imgSrc}" alt="${song.title} Cover" class="song-image" width="90" height="90">
                 <span class="song-title">${song.title}</span>
-                <button class="btn btn-outline-light btn-sm play-btn" data-song-id="${song.id}">Play</button>
+                <button class="btn btn-outline-light btn-sm play-btn" data-song-id="${song.id}" title="Play/Pause">
+                    <i class="bi bi-play-fill"></i>
+                </button>
             </div>
             <div class="song-controls w-100">
                 <p class="song-description small text-secondary">${song.description}</p>
                 <div class="d-flex align-items-center gap-2">
-                    <button class="btn btn-sm btn-light pause-btn">Pause</button>
-                    <button class="btn btn-sm btn-danger stop-btn">Stop</button>
+                    <button class="btn btn-sm btn-light simple-play-btn" title="Play">
+                        <i class="bi bi-play-fill"></i>
+                    </button>
+                    <button class="btn btn-sm btn-light pause-btn" title="Pause">
+                        <i class="bi bi-pause-fill"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger stop-btn" title="Stop">
+                        <i class="bi bi-stop-fill"></i>
+                    </button>
                     <input type="range" class="form-range flex-grow-1 seek-slider" min="0" max="100" step="any" value="0">
                 </div>
             </div>
@@ -82,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         songItems.forEach(item => {
             const playBtn = item.querySelector('.play-btn');
+            const simplePlayBtn = item.querySelector('.simple-play-btn');
             const pauseBtn = item.querySelector('.pause-btn');
             const stopBtn = item.querySelector('.stop-btn');
             const seekSlider = item.querySelector('.seek-slider');
@@ -110,6 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         audioPlayer.pause();
                     }
+                } else {
+                    playSong(songData);
+                }
+            });
+
+            simplePlayBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (currentSongId === songId) {
+                    audioPlayer.play();
                 } else {
                     playSong(songData);
                 }
@@ -216,12 +235,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (songId === currentSongId) {
                 if (audioPlayer.paused) {
-                    playBtn.textContent = 'Paused';
+                    playBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+                    playBtn.classList.remove('active');
                 } else {
-                    playBtn.textContent = 'Playing...';
+                    playBtn.innerHTML = 'Playing...';
+                    playBtn.classList.add('active');
                 }
             } else {
-                playBtn.textContent = 'Play';
+                playBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+                playBtn.classList.remove('active');
             }
         });
     }

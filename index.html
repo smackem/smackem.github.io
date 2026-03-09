@@ -21,20 +21,53 @@
     <main class="container">
         <!-- Milestone 2: Song list placeholder -->
         <ul class="song-list">
-            <li class="song-item">
-                <img src="https://placehold.co/90x90/111/eee?text=Song+1" alt="Song 1 Cover" class="song-image">
-                <span class="song-title">Song Title One</span>
-                <button class="btn btn-outline-light btn-sm">Play</button>
+            <li class="song-item flex-wrap">
+                <div class="d-flex align-items-center w-100">
+                    <img src="https://placehold.co/90x90/111/eee?text=Song+1" alt="Song 1 Cover" class="song-image">
+                    <span class="song-title">Song Title One</span>
+                    <button class="btn btn-outline-light btn-sm"><i class="bi bi-play-fill"></i></button>
+                </div>
+                <div class="song-controls w-100">
+                    <p class="song-description small text-secondary">Sample description for song 1.</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-sm btn-light"><i class="bi bi-play-fill"></i></button>
+                        <button class="btn btn-sm btn-light"><i class="bi bi-pause-fill"></i></button>
+                        <button class="btn btn-sm btn-danger"><i class="bi bi-stop-fill"></i></button>
+                        <input type="range" class="form-range flex-grow-1" min="0" max="100" value="0">
+                    </div>
+                </div>
             </li>
-            <li class="song-item">
-                <img src="https://placehold.co/90x90/111/eee?text=Song+2" alt="Song 2 Cover" class="song-image">
-                <span class="song-title">Song Title Two</span>
-                <button class="btn btn-outline-light btn-sm">Play</button>
+            <li class="song-item flex-wrap">
+                <div class="d-flex align-items-center w-100">
+                    <img src="https://placehold.co/90x90/111/eee?text=Song+2" alt="Song 2 Cover" class="song-image">
+                    <span class="song-title">Song Title Two</span>
+                    <button class="btn btn-outline-light btn-sm"><i class="bi bi-play-fill"></i></button>
+                </div>
+                <div class="song-controls w-100">
+                    <p class="song-description small text-secondary">Sample description for song 2.</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-sm btn-light"><i class="bi bi-play-fill"></i></button>
+                        <button class="btn btn-sm btn-light"><i class="bi bi-pause-fill"></i></button>
+                        <button class="btn btn-sm btn-danger"><i class="bi bi-stop-fill"></i></button>
+                        <input type="range" class="form-range flex-grow-1" min="0" max="100" value="0">
+                    </div>
+                </div>
             </li>
-            <li class="song-item">
-                <img src="https://placehold.co/90x90/111/eee?text=Song+3" alt="Song 3 Cover" class="song-image">
-                <span class="song-title">Song Title Three</span>
-                <button class="btn btn-outline-light btn-sm">Play</button>
+            <li class="song-item flex-wrap">
+                <div class="d-flex align-items-center w-100">
+                    <img src="https://placehold.co/90x90/111/eee?text=Song+3" alt="Song 3 Cover" class="song-image">
+                    <span class="song-title">Song Title Three</span>
+                    <button class="btn btn-outline-light btn-sm"><i class="bi bi-play-fill"></i></button>
+                </div>
+                <div class="song-controls w-100">
+                    <p class="song-description small text-secondary">Sample description for song 3.</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-sm btn-light"><i class="bi bi-play-fill"></i></button>
+                        <button class="btn btn-sm btn-light"><i class="bi bi-pause-fill"></i></button>
+                        <button class="btn btn-sm btn-danger"><i class="bi bi-stop-fill"></i></button>
+                        <input type="range" class="form-range flex-grow-1" min="0" max="100" value="0">
+                    </div>
+                </div>
             </li>
         </ul>
     </main>

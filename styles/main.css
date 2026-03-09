@@ -74,6 +74,20 @@ main {
     transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
 
+/* Button Glyph Styling and Centering */
+.btn-sm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0 0 0;
+    min-width: 32px; /* Changed width to min-width */
+    height: 32px;
+}
+
+.btn-sm i {
+    font-size: calc(1rem + 4px); /* Increase glyphs by 4px from base 1rem */
+}
+
 .song-item.selected .song-controls {
     max-height: 200px; /* Adjust based on content */
     opacity: 1;
@@ -107,7 +121,10 @@ footer {
 }
 
 .volume-icon {
-    font-size: 1.2rem;
+    font-size: calc(1.2rem + 4px); /* Increase by 4px from original 1.2rem */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #current-song-info {
