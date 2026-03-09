@@ -73,9 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const volumeIcon = document.querySelector('.volume-icon');
         const currentSongInfo = document.getElementById('current-song-info');
 
-        // Initial volume
-        audioPlayer.volume = footerVolume.value;
-        updateVolumeIcon(footerVolume.value);
+        // Load saved volume or default to 0.8
+        const savedVolume = localStorage.getItem('player-volume');
+        const initialVolume = savedVolume !== null ? parseFloat(savedVolume) : 0.8;
+        footerVolume.value = initialVolume;
+        audioPlayer.volume = initialVolume;
+        updateVolumeIcon(initialVolume);
 
         songItems.forEach(item => {
             const playBtn = item.querySelector('.play-btn');
@@ -135,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const volume = parseFloat(footerVolume.value);
             audioPlayer.volume = volume;
             updateVolumeIcon(volume);
+            localStorage.setItem('player-volume', volume);
         });
 
         /**
