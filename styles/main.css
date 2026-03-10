@@ -46,7 +46,7 @@ main {
 }
 
 .song-item.selected {
-    background-color: #111;
+    background-color: #1a1a1a;
     border-color: #444;
 }
 
@@ -73,6 +73,10 @@ main {
     transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
 
+.song-description {
+    color: #929ba2; /* Approx 15% lighter than standard Bootstrap text-secondary (#6c757d) */
+}
+
 /* Button Glyph Styling and Centering */
 .btn-sm {
     display: inline-flex;
@@ -85,6 +89,15 @@ main {
 
 .btn-sm i {
     font-size: calc(1rem + 4px); /* Increase glyphs by 4px from base 1rem */
+}
+
+.play-btn.active {
+    display: none !important;
+}
+
+.simple-play-btn.playing {
+    background-color: #eee;
+    color: #000;
 }
 
 .song-item.selected .song-controls {
@@ -129,6 +142,18 @@ footer {
 #current-song-info {
     font-style: italic;
     min-width: 200px;
+}
+
+.song-time, .song-duration {
+    min-width: 50px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 576px) and (orientation: portrait) {
+    .song-duration {
+        display: none !important;
+    }
 }
 
 a {

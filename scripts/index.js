@@ -58,13 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="btn btn-sm btn-light simple-play-btn" title="Play">
                         <i class="bi bi-play-fill"></i>
                     </button>
-                    <button class="btn btn-sm btn-light pause-btn" title="Pause">
-                        <i class="bi bi-pause-fill"></i>
+                    <button class="btn btn-sm btn-light next-btn" title="Next Song">
+                        <i class="bi bi-skip-forward-fill"></i>
                     </button>
                     <button class="btn btn-sm btn-danger stop-btn" title="Stop">
                         <i class="bi bi-stop-fill"></i>
                     </button>
+                    <span class="song-time small">0:00</span>
                     <input type="range" class="form-range flex-grow-1 seek-slider" min="0" max="100" step="any" value="0">
+                    <span class="song-duration small">-0:00</span>
                 </div>
             </div>
         `;
@@ -92,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         songItems.forEach(item => {
             const playBtn = item.querySelector('.play-btn');
             const simplePlayBtn = item.querySelector('.simple-play-btn');
-            const pauseBtn = item.querySelector('.pause-btn');
+            const nextBtn = item.querySelector('.next-btn');
             const stopBtn = item.querySelector('.stop-btn');
             const seekSlider = item.querySelector('.seek-slider');
             const songId = item.id;
@@ -128,15 +130,21 @@ document.addEventListener('DOMContentLoaded', () => {
             simplePlayBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 if (currentSongId === songId) {
-                    audioPlayer.play();
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                    } else {
+                        audioPlayer.pause();
+                    }
                 } else {
                     playSong(songData);
                 }
             });
 
-            pauseBtn.addEventListener('click', (e) => {
+            nextBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                audioPlayer.pause();
+                const currentIndex = songs.findIndex(s => s.id === songId);
+                const nextIndex = (currentIndex + 1) % songs.length;
+                playSong(songs[nextIndex]);
             });
 
             stopBtn.addEventListener('click', (e) => {
@@ -176,19 +184,41 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Update seek slider smoothly
+        // Update seek slider and time labels smoothly
         function updateProgress() {
-            if (currentSongId && !audioPlayer.paused) {
+            if (currentSongId) {
                 const currentItem = document.getElementById(currentSongId);
                 const seekSlider = currentItem ? currentItem.querySelector('.seek-slider') : null;
-                if (seekSlider && audioPlayer.duration) {
-                    const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-                    seekSlider.value = progress;
+                const timeLabel = currentItem ? currentItem.querySelector('.song-time') : null;
+                const durationLabel = currentItem ? currentItem.querySelector('.song-duration') : null;
+
+                if (audioPlayer.duration) {
+                    if (!audioPlayer.paused) {
+                        const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                        if (seekSlider) seekSlider.value = progress;
+                    }
+                    if (timeLabel) timeLabel.textContent = formatTime(audioPlayer.currentTime);
+                    if (durationLabel) {
+                        const remaining = audioPlayer.duration - audioPlayer.currentTime;
+                        durationLabel.textContent = `-${formatTime(remaining)}`;
+                    }
                 }
             }
             requestAnimationFrame(updateProgress);
         }
         requestAnimationFrame(updateProgress);
+
+        /**
+         * Formats seconds into MM:SS
+         * @param {number} seconds 
+         * @returns {string}
+         */
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
 
         audioPlayer.addEventListener('play', () => {
             updateUIState();
@@ -231,19 +261,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const songItems = document.querySelectorAll('.song-item');
         songItems.forEach(item => {
             const playBtn = item.querySelector('.play-btn');
+            const simplePlayBtn = item.querySelector('.simple-play-btn');
             const songId = item.id;
 
             if (songId === currentSongId) {
                 if (audioPlayer.paused) {
                     playBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
                     playBtn.classList.remove('active');
+                    simplePlayBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+                    simplePlayBtn.classList.remove('playing');
                 } else {
-                    playBtn.innerHTML = 'Playing...';
+                    // playBtn is hidden when active via CSS
                     playBtn.classList.add('active');
+                    simplePlayBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+                    simplePlayBtn.classList.add('playing');
                 }
             } else {
                 playBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
                 playBtn.classList.remove('active');
+                simplePlayBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+                simplePlayBtn.classList.remove('playing');
             }
         });
     }
