@@ -91,7 +91,13 @@ main {
     font-size: calc(1rem + 4px); /* Increase glyphs by 4px from base 1rem */
 }
 
-.play-btn.active {
+.play-btn.active,
+.share-btn.active {
+    display: none !important;
+}
+
+/* Hide share button when song is selected/expanded */
+.song-item.selected .share-btn {
     display: none !important;
 }
 

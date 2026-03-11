@@ -48,9 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="d-flex align-items-center w-100">
                 <img src="${imgSrc}" alt="${song.title} Cover" class="song-image" width="90" height="90">
                 <span class="song-title">${song.title}</span>
-                <button class="btn btn-outline-light btn-sm play-btn" data-song-id="${song.id}" title="Play/Pause">
-                    <i class="bi bi-play-fill"></i>
-                </button>
+                <div class="ms-auto d-flex gap-1">
+                    <button class="btn btn-outline-light btn-sm share-btn" data-song-id="${song.id}" title="Copy Link to Song">
+                        <i class="bi bi-link-45deg"></i>
+                    </button>
+                    <button class="btn btn-outline-light btn-sm play-btn" data-song-id="${song.id}" title="Play/Pause">
+                        <i class="bi bi-play-fill"></i>
+                    </button>
+                </div>
             </div>
             <div class="song-controls w-100">
                 <p class="song-description small text-secondary">${song.description}</p>
@@ -84,6 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const volumeIcon = document.querySelector('.volume-icon');
         const currentSongInfo = document.getElementById('current-song-info');
 
+        // Handle URL hash on load
+        handleHash(songs);
+
+        // Listen for hash changes
+        window.addEventListener('hashchange', () => handleHash(songs));
+
         // Load saved volume or default to 0.8
         const savedVolume = localStorage.getItem('player-volume');
         const initialVolume = savedVolume !== null ? parseFloat(savedVolume) : 0.8;
@@ -93,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         songItems.forEach(item => {
             const playBtn = item.querySelector('.play-btn');
+            const shareBtn = item.querySelector('.share-btn');
             const simplePlayBtn = item.querySelector('.simple-play-btn');
             const nextBtn = item.querySelector('.next-btn');
             const stopBtn = item.querySelector('.stop-btn');
@@ -110,6 +122,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     playSong(songData);
                 }
+            });
+
+            shareBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const url = new URL(window.location.href);
+                url.hash = songId;
+                navigator.clipboard.writeText(url.href).then(() => {
+                    const icon = shareBtn.querySelector('i');
+                    icon.className = 'bi bi-check2';
+                    setTimeout(() => {
+                        icon.className = 'bi bi-link-45deg';
+                    }, 2000);
+                });
             });
 
             // Handle clicking the image to play/pause
@@ -307,5 +332,28 @@ document.addEventListener('DOMContentLoaded', () => {
     function collapseSong(id) {
         const item = document.getElementById(id);
         if (item) item.classList.remove('selected');
+    }
+
+    /**
+     * Handles the URL hash to play a specific song
+     * @param {Array} songs 
+     */
+    function handleHash(songs) {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            const song = songs.find(s => s.id === hash);
+            if (song) {
+                // We use a small timeout to ensure the DOM is fully ready and scroll into view works
+                setTimeout(() => {
+                    const element = document.getElementById(hash);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    if (currentSongId !== hash) {
+                        playSong(song);
+                    }
+                }, 300);
+            }
+        }
     }
 });
