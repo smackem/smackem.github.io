@@ -4,21 +4,28 @@
     "title": "Selling Lies (feat. Ilho Cho)",
     "audio": "assets/SellingLies-master.mp3",
     "image": "assets/SellingLies.png",
-    "description": "A powerful anthem that unmasks the deception and greed of the modern world, featuring Ilho Cho's vocals."
+    "description": "Mid-paced Heavy Metal song featuring Ilho Cho's vocals."
   },
   {
     "id": "song-2",
     "title": "Victories (feat. Insane Divinity)",
     "audio": "assets/Victories-v2.mp3",
     "image": "assets/Victories.png",
-    "description": "Epic lion metal featuring Insane Divinity's vocals."
+    "description": "Epic Melodic Death Metal featuring Insane Divinity's vocals."
   },
   {
     "id": "song-8",
     "title": "Deep Waves (feat. Nyx Peccatum)",
     "audio": "assets/DeepWaves-121bpm-master.mp3",
     "image": "assets/DeepWaves.jpeg",
-    "description": "A dark and mysterious metal band."
+    "description": "Melodic Metal featuring beautiful female vocals by Ukrainian singer Nyx Peccatum."
+  },
+  {
+    "id": "song-10",
+    "title": "Flight Call (feat. Rhinefer)",
+    "audio": "assets/FlightCall-108bpm-master.mp3",
+    "image": "assets/FlightCall.jpeg",
+    "description": "Mid-tempo doom metal ballad featuring female vocals by Rhinefer."
   },
   {
     "id": "song-3",
@@ -54,5 +61,12 @@
     "audio": "assets/BrookOverBlackRocks-master.mp3",
     "image": "assets/BrookOverBlackRocks.png",
     "description": "A merry stream flows over black rocks from hell."
+  },
+  {
+    "id": "song-9",
+    "title": "Blood Crown",
+    "audio": "assets/BloodCrown-master.mp3",
+    "image": "assets/BloodCrown.png",
+    "description": "Powerful up-tempo track, featuring doom metal, heavy metal and black metal elements."
   }
 ]
