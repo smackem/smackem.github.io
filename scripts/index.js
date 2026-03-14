@@ -266,8 +266,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Auto-advance to next song
         audioPlayer.addEventListener('ended', () => {
             const currentIndex = songs.findIndex(s => s.id === currentSongId);
-            const nextIndex = (currentIndex + 1) % songs.length;
-            playSong(songs[nextIndex]);
+            if (currentIndex < songs.length - 1) {
+                playSong(songs[currentIndex + 1]);
+            } else {
+                stopPlayback();
+            }
         });
     }
 

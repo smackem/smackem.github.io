@@ -68,5 +68,12 @@
     "audio": "assets/BloodCrown-master.mp3",
     "image": "assets/BloodCrown.png",
     "description": "Powerful up-tempo track, featuring doom metal, heavy metal and black metal elements."
+  },
+  {
+    "id": "song-11",
+    "title": "Serenadem",
+    "audio": "assets/Serenadem-master.mp3",
+    "image": "assets/Serenadem.png",
+    "description": "A beautiful, melodic, and beautiful ending to the song."
   }
 ]
