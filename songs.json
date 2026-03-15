@@ -28,6 +28,13 @@
     "description": "Mid-tempo doom metal ballad featuring female vocals by Rhinefer."
   },
   {
+    "id": "song-12",
+    "title": "Arch Nemesis (feat. Insane Divinity)",
+    "audio": "assets/ArchNemesis-160bpm-v7-master.mp3",
+    "image": "assets/ArchNemesis.png",
+    "description": "Melodic Death Metal featuring Insane Divinity on vocals."
+  },
+  {
     "id": "song-3",
     "title": "Overdozem",
     "audio": "assets/Overdozem-172bpm-master.mp3",
