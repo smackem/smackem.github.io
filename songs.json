@@ -1,83 +1,83 @@
 [
   {
-    "id": "song-1",
+    "id": "selling-lies-feat-ilho-cho",
     "title": "Selling Lies (feat. Ilho Cho)",
     "audio": "assets/SellingLies-master.mp3",
     "image": "assets/SellingLies.png",
     "description": "Mid-paced Heavy Metal song featuring Ilho Cho's vocals."
   },
   {
-    "id": "song-2",
+    "id": "victories-feat-insane-divinity",
     "title": "Victories (feat. Insane Divinity)",
     "audio": "assets/Victories-v2.mp3",
     "image": "assets/Victories.png",
     "description": "Epic Melodic Death Metal featuring Insane Divinity's vocals."
   },
   {
-    "id": "song-8",
+    "id": "deep-waves-feat-nyx-peccatum",
     "title": "Deep Waves (feat. Nyx Peccatum)",
     "audio": "assets/DeepWaves-121bpm-master.mp3",
     "image": "assets/DeepWaves.jpeg",
     "description": "Melodic Metal featuring beautiful female vocals by Ukrainian singer Nyx Peccatum."
   },
   {
-    "id": "song-10",
+    "id": "flight-call-feat-rhinefer",
     "title": "Flight Call (feat. Rhinefer)",
     "audio": "assets/FlightCall-108bpm-master.mp3",
     "image": "assets/FlightCall.jpeg",
     "description": "Mid-tempo doom metal ballad featuring female vocals by Rhinefer."
   },
   {
-    "id": "song-12",
+    "id": "arch-nemesis-feat-insane-divinity",
     "title": "Arch Nemesis (feat. Insane Divinity)",
-    "audio": "assets/ArchNemesis-160bpm-v7-master.mp3",
+    "audio": "assets/ArchNemesis-160bpm-v8-master.mp3",
     "image": "assets/ArchNemesis.png",
     "description": "Melodic Death Metal featuring Insane Divinity on vocals."
   },
   {
-    "id": "song-3",
+    "id": "overdozem",
     "title": "Overdozem",
     "audio": "assets/Overdozem-172bpm-master.mp3",
     "image": "assets/Overdozem.png",
     "description": "Instrumental sing-along power metal."
   },
   {
-    "id": "song-4",
+    "id": "hell-brawl",
     "title": "Hell Brawl",
     "audio": "assets/HellBrawl-116bpm-master.mp3",
     "image": "assets/HellBrawl.png",
     "description": "The horned beasts are dishing it out against each other - again!"
   },
   {
-    "id": "song-5",
+    "id": "morphine-flight",
     "title": "Morphine Flight",
     "audio": "assets/MorphineFlight-master-002.mp3",
     "image": "assets/MorphineFlight.png",
     "description": "colorful, peaceful, dead"
   },
   {
-    "id": "song-6",
+    "id": "hammer-of-hope",
     "title": "Hammer of Hope",
     "audio": "assets/HammerOfHope-160bpm-master.mp3",
     "image": "assets/HammerOfHope.png",
     "description": "Fast and melodic power metal with a nice and trippy bridge, ready for receiving vocals!"
   },
   {
-    "id": "song-7",
+    "id": "brook-over-black-rocks",
     "title": "Brook Over Black Rocks",
     "audio": "assets/BrookOverBlackRocks-master.mp3",
     "image": "assets/BrookOverBlackRocks.png",
     "description": "A merry stream flows over black rocks from hell."
   },
   {
-    "id": "song-9",
+    "id": "blood-crown",
     "title": "Blood Crown",
     "audio": "assets/BloodCrown-master.mp3",
     "image": "assets/BloodCrown.png",
     "description": "Powerful up-tempo track, featuring doom metal, heavy metal and black metal elements."
   },
   {
-    "id": "song-11",
+    "id": "serenadem",
     "title": "Serenadem",
     "audio": "assets/Serenadem-master.mp3",
     "image": "assets/Serenadem.png",
