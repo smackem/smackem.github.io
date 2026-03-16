@@ -193,6 +193,29 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('player-volume', volume);
         });
 
+        // Global spacebar listener for play/pause
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' || e.key === ' ') {
+                // Don't trigger if user is typing in an input or textarea
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+                    return;
+                }
+
+                e.preventDefault(); // Prevent page scroll
+                
+                if (currentSongId) {
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                    } else {
+                        audioPlayer.pause();
+                    }
+                } else if (songs.length > 0) {
+                    // If no song is selected/playing, play the first one
+                    playSong(songs[0]);
+                }
+            }
+        });
+
         /**
          * Updates the volume icon based on volume level
          * @param {number} volume 
