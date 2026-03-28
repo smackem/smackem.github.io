@@ -35,6 +35,13 @@
     "description": "Melodic Death Metal featuring Insane Divinity on vocals."
   },
   {
+    "id": "death-call",
+    "title": "Death Call",
+    "audio": "assets/DeathCall-186bpm-master.mp3",
+    "image": "assets/DeathCall.png",
+    "description": "Get on the phone, the reaper is calling!"
+  },
+  {
     "id": "overdozem",
     "title": "Overdozem",
     "audio": "assets/Overdozem-172bpm-master.mp3",
