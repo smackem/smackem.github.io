@@ -1,5 +1,12 @@
 [
   {
+    "id": "never-learn",
+    "title": "Never Learn (feat. Ilho Cho)",
+    "audio": "assets/NeverLearn-master.mp3",
+    "image": "assets/NeverLearn.jpg",
+    "description": "Upspeed heavy metal song featuring Ilho Cho's vocals."
+  },
+  {
     "id": "selling-lies-feat-ilho-cho",
     "title": "Selling Lies (feat. Ilho Cho)",
     "audio": "assets/SellingLies-master.mp3",
