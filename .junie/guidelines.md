@@ -13,7 +13,7 @@ Junie will be responsible for implementing features, maintaining code quality, a
 ## **Application Description**
 
 The web page presents a list of songs, which can be played through HTML5 audio playback controls.
-Each song has a quadratic image (90x90 pixels) left of the song title. Next to the song title is a play button. Whenever a song is played, the song list item becomes selected and expands to display playback controls like pause, stop, a seek slider and volume controls. Only the currently playing song has this expanded view. When a song is played, the currently playing song is stopped.
+Each song has a quadratic image (140x140 pixels) left of the song title. Next to the song title is a play button. Whenever a song is played, the song list item becomes selected and expands to display playback controls like pause, stop, a seek slider and volume controls. Only the currently playing song has this expanded view. When a song is played, the currently playing song is stopped.
 When a song ends, the next song in the list is played automatically.
 Songs are described in a single file containing a JSON structure, which contains the relative path of the song (under the directory "assets"), the song title, the relative path of the associated image (also under the directory "assets") and a song description.
 This means that in order to add new songs, the developer only needs to put the audio file and image into the assets directory and update the songs.json file.
