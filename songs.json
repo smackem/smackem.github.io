@@ -42,6 +42,13 @@
     "description": "Melodic Death Metal featuring Insane Divinity on vocals."
   },
   {
+    "id": "way-to-valhalla-feat-insane-divinity",
+    "title": "Way to Valhalla (feat. Insane Divinity)",
+    "audio": "assets/GreatValhalla-master-72bpm-master.mp3",
+    "image": "assets/WayToValhalla.png",
+    "description": "Epic Melodic Death Metal featuring Insane Divinity on vocals."
+  },
+  {
     "id": "death-call",
     "title": "Death Call (v4)",
     "audio": "assets/DeathCall-186bpm-master.mp3",
