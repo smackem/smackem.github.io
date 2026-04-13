@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         li.innerHTML = `
             <div class="d-flex align-items-center w-100">
-                <img src="${imgSrc}" alt="${song.title} Cover" class="song-image" width="140" height="140">
+                <img src="${imgSrc}" alt="${song.title} Cover" class="song-image" width="140" height="140" loading="lazy">
                 <span class="song-title">${song.title}</span>
                 <div class="ms-auto d-flex gap-1">
                     <button class="btn btn-outline-light btn-sm share-btn" data-song-id="${song.id}" title="Copy Link to Song">
