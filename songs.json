@@ -1,5 +1,12 @@
 [
   {
+    "id": "skinned-alive-feat-gudeath",
+    "title": "Skinned Alive (feat. Gudeath)",
+    "audio": "assets/BlackPea_mk-148bpm-master.mp3",
+    "image": "assets/SkinnedAlive.jpg",
+    "description": "Up-tempo heavy metal song featuring Gudeath's vocals."
+  },
+  {
     "id": "never-learn",
     "title": "Never Learn (feat. Ilho Cho) (v2)",
     "audio": "assets/NeverLearn-master.mp3",
