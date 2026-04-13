@@ -20,7 +20,7 @@ header {
 main {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1rem 20px 1rem; /* Reduced bottom padding to 20px */
 }
 
 /* Song List styles (for Milestone 2) */
@@ -123,14 +123,27 @@ input[type=range].form-range::-webkit-slider-thumb {
 }
 
 footer {
-    padding: 0.5rem 0;
-    margin-top: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    border-top: 1px solid #333;
+    padding: 10px 0;
+    margin-top: 0;
+    z-index: 1000;
 }
 
 .footer-bottom {
-    border-top: 1px solid #444;
-    margin-top: 1rem;
-    padding-top: 1rem;
+    display: none; /* Hide standard footer bottom in fixed player view */
+}
+
+/* Add a separate class for when we want the full footer (e.g., if there's a scrollable bottom) */
+.full-footer {
+    position: static;
+    display: block;
+    margin-top: 0; /* Removed margin-top to achieve 20px gap from main padding */
+    padding-bottom: 120px; /* Added padding-bottom to clear the fixed footer */
 }
 
 .footer-player {
