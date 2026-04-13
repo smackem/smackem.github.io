@@ -88,6 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const footerVolume = document.getElementById('footer-volume');
         const volumeIcon = document.querySelector('.volume-icon');
         const currentSongInfo = document.getElementById('current-song-info');
+        const volumeControl = footerVolume ? footerVolume.closest('.d-flex') : null;
+
+        // Check if device is iOS (where volume is read-only via JS)
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        
+        if (isIOS && volumeControl) {
+            volumeControl.style.display = 'none'; // Hide volume control on iOS
+        }
 
         // Handle URL hash on load
         handleHash(songs);
