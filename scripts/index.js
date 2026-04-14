@@ -91,7 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const volumeControl = footerVolume ? footerVolume.closest('.d-flex') : null;
 
         // Check if device is iOS (where volume is read-only via JS)
-        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        // Modern iPadOS (iOS 13+) identifies as Mac but has touch points
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+                     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
         
         if (isIOS && volumeControl) {
             volumeControl.style.display = 'none'; // Hide volume control on iOS
