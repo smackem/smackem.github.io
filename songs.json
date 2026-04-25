@@ -56,6 +56,13 @@
     "description": "Epic Melodic Death Metal featuring Insane Divinity on vocals."
   },
   {
+    "id": "vampire-hunters-requiem-feat-insane-divinity",
+    "title": "Vampire Hunter's Requiem (feat. Insane Divinity)",
+    "audio": "assets/DeathRider-150bpm-master.mp3",
+    "image": "assets/DeathRider.jpeg",
+    "description": "Melodic Death Metal featuring Insane Divinity on vocals"
+  },
+  {
     "id": "death-call",
     "title": "Death Call (v4)",
     "audio": "assets/DeathCall-186bpm-master.mp3",
