@@ -1,5 +1,12 @@
 [
   {
+    "id": "overdozem-insane",
+    "title": "Overdozem (feat. Insane Divinity)",
+    "audio": "assets/Overdozem_1-172bpm-master.mp3",
+    "image": "assets/Overdozem-insane.jpeg",
+    "description": "Melodic Death Metal anthem featuring Insane Divinity's vocals."
+  },
+  {
     "id": "skinned-alive",
     "title": "Skinned Alive (feat. Madditz)",
     "audio": "assets/BlackPea_mk-148bpm-master.mp3",
@@ -71,7 +78,7 @@
   },
   {
     "id": "overdozem",
-    "title": "Overdozem",
+    "title": "Overdozem (instrumental)",
     "audio": "assets/Overdozem-172bpm-master.mp3",
     "image": "assets/Overdozem.png",
     "description": "Instrumental sing-along power metal."
