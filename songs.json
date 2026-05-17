@@ -1,5 +1,12 @@
 [
   {
+    "id": "chains-madditz",
+    "title": "Chains (feat. Madditz)",
+    "audio": "assets/FairGame-134bpm-master.mp3",
+    "image": "assets/Chains.jpeg",
+    "description": "Dark, gothic, heavy, melodic - featuring Madditz's vocals."
+  },
+  {
     "id": "overdozem-insane",
     "title": "Overdozem (feat. Insane Divinity) (v3)",
     "audio": "assets/Overdozem_1-172bpm-master.mp3",
