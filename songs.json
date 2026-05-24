@@ -1,5 +1,12 @@
 [
   {
+    "id": "drag-ilho-cho",
+    "title": "Drag (feat. Ilho Cho)",
+    "audio": "assets/MorphineFlight-120bpm-master.mp3",
+    "image": "assets/Drag.jpeg",
+    "description": "Melodic heavy metal song featuring Ilho Cho's vocals."
+  },
+  {
     "id": "chains-madditz",
     "title": "Chains (feat. Madditz) (v3)",
     "audio": "assets/FairGame-134bpm-master.mp3",
