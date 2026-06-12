@@ -84,6 +84,13 @@
     "description": "Melodic Death Metal featuring Insane Divinity on vocals"
   },
   {
+    "id": "fire-fries",
+    "title": "Fire Fries",
+    "audio": "assets/FireFries.mp3",
+    "image": "assets/FireFries.png",
+    "description": "They're not just fries, they're fire!"
+  },
+  {
     "id": "death-call",
     "title": "Death Call (v4)",
     "audio": "assets/DeathCall-186bpm-master.mp3",
