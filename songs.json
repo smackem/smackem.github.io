@@ -84,6 +84,13 @@
     "description": "Melodic Death Metal featuring Insane Divinity on vocals"
   },
   {
+    "id": "heart-impaled",
+    "title": "Heart Impaled",
+    "audio": "assets/HeartImpaled.mp3",
+    "image": "assets/HeartImpaled.png",
+    "description": "They say it hurts..."
+  },
+  {
     "id": "fire-fries",
     "title": "Fire Fries",
     "audio": "assets/FireFries.mp3",
