@@ -84,6 +84,13 @@
     "description": "Melodic Death Metal featuring Insane Divinity on vocals"
   },
   {
+    "id": "soul-slicer",
+    "title": "Soul Slicer",
+    "audio": "assets/SoulSlicer-master.mp3",
+    "image": "assets/SoulSlicer.png",
+    "description": "Merrily slicing what the slayer has slayed..."
+  },
+  {
     "id": "heart-impaled",
     "title": "Heart Impaled (v2)",
     "audio": "assets/HeartImpaled.mp3",
