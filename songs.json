@@ -84,6 +84,13 @@
     "description": "Melodic Death Metal featuring Insane Divinity on vocals"
   },
   {
+    "id": "manhunt",
+    "title": "Manhunt",
+    "audio": "assets/Manhunt-144bpm-master.mp3",
+    "image": "assets/Manhunt.png",
+    "description": "You better run!"
+  },
+  {
     "id": "soul-slicer",
     "title": "Soul Slicer",
     "audio": "assets/SoulSlicer-master.mp3",
