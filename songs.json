@@ -84,6 +84,13 @@
     "description": "Melodic Death Metal featuring Insane Divinity on vocals"
   },
   {
+    "id": "ghost-ball",
+    "title": "Ghost Ball",
+    "audio": "assets/GhostBall-167bpm-master.mp3",
+    "image": "assets/GhostBall.png",
+    "description": "Kick it like dead ham!"
+  },
+  {
     "id": "manhunt",
     "title": "Manhunt (v3)",
     "audio": "assets/Manhunt-144bpm-master.mp3",
