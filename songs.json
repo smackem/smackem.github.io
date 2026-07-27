@@ -84,6 +84,13 @@
     "description": "Melodic Death Metal featuring Insane Divinity on vocals"
   },
   {
+    "id": "wintry-silence-insane",
+    "title": "Wintry Silence (feat. Insane Divinity)",
+    "audio": "assets/WintrySilence-114bpm-master.mp3",
+    "image": "assets/WintrySilence.png",
+    "description": "Frosted Black Metal featuring Insane Divinity on vocals"
+  },
+  {
     "id": "ghost-ball",
     "title": "Ghost Ball (v2)",
     "audio": "assets/GhostBall-167bpm-master.mp3",
