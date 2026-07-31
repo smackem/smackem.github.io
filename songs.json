@@ -91,6 +91,13 @@
     "description": "Frosted Black Metal featuring Insane Divinity on vocals"
   },
   {
+    "id": "gore-fields-insane",
+    "title": "Gore Fields (feat. Insane Divinity)",
+    "audio": "assets/GoreFields-70bpm-master.mp3",
+    "image": "assets/GoreFields.png",
+    "description": "Melodeath ballad featuring Insane Divinity on vocals"
+  },
+  {
     "id": "ghost-ball",
     "title": "Ghost Ball (v2)",
     "audio": "assets/GhostBall-167bpm-master.mp3",
