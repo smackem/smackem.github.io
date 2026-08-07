@@ -98,6 +98,13 @@
     "description": "Melodeath ballad featuring Insane Divinity on vocals"
   },
   {
+    "id": "badass-badger-insane",
+    "title": "Badass Badger (feat. Insane Divinity)",
+    "audio": "assets/HoneyBadger-master.mp3",
+    "image": "assets/HoneyBadger.png",
+    "description": "Brutal, fast, fearless, black & white!"
+  },
+  {
     "id": "ghost-ball",
     "title": "Ghost Ball (v2)",
     "audio": "assets/GhostBall-167bpm-master.mp3",
