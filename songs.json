@@ -105,6 +105,13 @@
     "description": "Brutal, fast, fearless, black & white!"
   },
   {
+    "id": "soul-shatter",
+    "title": "Soul Shatter",
+    "audio": "assets/SoulShatter-master.mp3",
+    "image": "assets/SouldShatter.png",
+    "description": "Soul shattering!"
+  },
+  {
     "id": "ghost-ball",
     "title": "Ghost Ball (v2)",
     "audio": "assets/GhostBall-167bpm-master.mp3",
