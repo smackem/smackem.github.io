@@ -42,13 +42,6 @@
     "description": "Mid-paced Heavy Metal song featuring Ilho Cho's vocals."
   },
   {
-    "id": "victories-feat-insane-divinity",
-    "title": "Victories (feat. Insane Divinity)",
-    "audio": "assets/Victories-v2.mp3",
-    "image": "assets/Victories.png",
-    "description": "Epic Melodic Death Metal featuring Insane Divinity's vocals."
-  },
-  {
     "id": "deep-waves-feat-nyx-peccatum",
     "title": "Deep Waves (feat. Nyx Peccatum) (v4)",
     "audio": "assets/DeepWaves-121bpm-master.mp3",
@@ -103,6 +96,13 @@
     "audio": "assets/HoneyBadger-master.mp3",
     "image": "assets/HoneyBadger.png",
     "description": "Brutal, fast, fearless, black & white!"
+  },
+  {
+    "id": "victories-feat-insane-divinity",
+    "title": "Victories (feat. Insane Divinity)",
+    "audio": "assets/Victories-insane.mp3",
+    "image": "assets/Victories.png",
+    "description": "Epic Melodic Death Metal featuring Insane Divinity's vocals."
   },
   {
     "id": "soul-shatter",
