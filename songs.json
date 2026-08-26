@@ -148,10 +148,10 @@
   },
   {
     "id": "death-call",
-    "title": "Death Call (v4)",
+    "title": "Death Call (v5)",
     "audio": "assets/DeathCall-186bpm-master.mp3",
     "image": "assets/DeathCall.png",
-    "description": "Get on the phone, the reaper is calling!"
+    "description": "Answer the phone, the reaper is calling!"
   },
   {
     "id": "overdozem",
