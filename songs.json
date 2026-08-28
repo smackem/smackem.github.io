@@ -14,13 +14,6 @@
     "description": "Dark, gothic, heavy, melodic - featuring Madditz's vocals."
   },
   {
-    "id": "overdozem-insane",
-    "title": "Overdozem (feat. Insane Divinity) (v3)",
-    "audio": "assets/Overdozem_1-172bpm-master.mp3",
-    "image": "assets/Overdozem-insane2.jpeg",
-    "description": "Melodic Death Metal anthem featuring Insane Divinity's vocals."
-  },
-  {
     "id": "skinned-alive",
     "title": "Skinned Alive (feat. Madditz) (v2)",
     "audio": "assets/BlackPea_mk-148bpm-master.mp3",
@@ -103,6 +96,13 @@
     "audio": "assets/Victories-insane.mp3",
     "image": "assets/Victories.png",
     "description": "Epic Melodic Death Metal featuring Insane Divinity's vocals."
+  },
+  {
+    "id": "overdozem-insane",
+    "title": "Overdozem (feat. Insane Divinity) (v4)",
+    "audio": "assets/Overdozem_1-172bpm-master.mp3",
+    "image": "assets/Overdozem-insane2.jpeg",
+    "description": "Melodic Death Metal anthem featuring Insane Divinity's vocals."
   },
   {
     "id": "soul-shatter",
