@@ -112,6 +112,13 @@
     "description": "Melodic Death Metal anthem featuring Insane Divinity's vocals."
   },
   {
+    "id": "unkind-mind",
+    "title": "Unkind Mind",
+    "audio": "assets/UnkindMind-master.mp3",
+    "image": "assets/UnkindMind.png",
+    "description": "Trying out drop-a tuning with freq-out and Misha plugin"
+  },
+  {
     "id": "soul-shatter",
     "title": "Soul Shatter (v4)",
     "audio": "assets/SoulShatter-master.mp3",
