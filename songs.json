@@ -105,6 +105,13 @@
     "description": "Melodic Death Metal anthem featuring Insane Divinity's vocals."
   },
   {
+    "id": "one-heart-one-hammer",
+    "title": "One Heart One Hammer (feat. Rob Power)",
+    "audio": "assets/IronHeart-195bpm-master.mp3",
+    "image": "assets/OneHeartOneHammer.png",
+    "description": "Power Metal with AI-generated vocals. Had the fun of my life making this."
+  },
+  {
     "id": "unkind-mind",
     "title": "Unkind Mind (v2)",
     "audio": "assets/UnkindMind-master.mp3",
