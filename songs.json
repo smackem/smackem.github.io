@@ -105,6 +105,13 @@
     "description": "Melodic Death Metal anthem featuring Insane Divinity's vocals."
   },
   {
+    "id": "the-devils-queen",
+    "title": "The Devil's Queen (feat. Jerry Leech)",
+    "audio": "assets/TheDevilsQueen-168bpm-master.mp3",
+    "image": "assets/TheDevilsQueen.png",
+    "description": "MetalCore with AI-generated vocals."
+  },
+  {
     "id": "one-heart-one-hammer",
     "title": "One Heart One Hammer (feat. Rob Power) (v2)",
     "audio": "assets/IronHeart-195bpm-master.mp3",
