@@ -119,6 +119,13 @@
     "description": ""
   },
   {
+    "id": "waytovalhalla-insane-album",
+    "title": "Way to Valhalla (Insane Album Version)",
+    "audio": "assets/WayToValhalla-album-master.mp3",
+    "image": "assets/dozem.png",
+    "description": ""
+  },
+  {
     "id": "the-devils-queen",
     "title": "The Devil's Queen (feat. Jerry Leech)",
     "audio": "assets/TheDevilsQueen-168bpm-master.mp3",
