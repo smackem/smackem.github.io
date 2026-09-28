@@ -105,6 +105,20 @@
     "description": "Melodic Death Metal anthem featuring Insane Divinity's vocals."
   },
   {
+    "id": "overdozem-insane-album",
+    "title": "Overdozem (Insane Album Version)",
+    "audio": "assets/Overdozem-album-master.mp3",
+    "image": "assets/dozem.png",
+    "description": ""
+  },
+  {
+    "id": "archnemesis-insane-album",
+    "title": "Arch Nemesis (Insane Album Version)",
+    "audio": "assets/ArchNemesis-album-master.mp3",
+    "image": "assets/dozem.png",
+    "description": ""
+  },
+  {
     "id": "the-devils-queen",
     "title": "The Devil's Queen (feat. Jerry Leech)",
     "audio": "assets/TheDevilsQueen-168bpm-master.mp3",
