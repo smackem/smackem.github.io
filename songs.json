@@ -126,6 +126,13 @@
     "description": ""
   },
   {
+    "id": "vampirehunter-insane-album",
+    "title": "Vampire Hunter's Requien (Insane Album Version)",
+    "audio": "assets/VampireHunter-album-master.mp3",
+    "image": "assets/dozem.png",
+    "description": ""
+  },
+  {
     "id": "the-devils-queen",
     "title": "The Devil's Queen (feat. Jerry Leech)",
     "audio": "assets/TheDevilsQueen-168bpm-master.mp3",
