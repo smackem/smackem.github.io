@@ -127,8 +127,15 @@
   },
   {
     "id": "vampirehunter-insane-album",
-    "title": "Vampire Hunter's Requien (Insane Album Version)",
+    "title": "Vampire Hunter's Requiem (Insane Album Version)",
     "audio": "assets/VampireHunter-album-master.mp3",
+    "image": "assets/dozem.png",
+    "description": ""
+  },
+  {
+    "id": "wintrysilence-insane-album",
+    "title": "Wintry Silence (Insane Album Version)",
+    "audio": "assets/WintrySilence-album-master.mp3",
     "image": "assets/dozem.png",
     "description": ""
   },
