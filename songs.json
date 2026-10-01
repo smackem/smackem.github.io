@@ -106,36 +106,43 @@
   },
   {
     "id": "overdozem-insane-album",
-    "title": "Overdozem (Insane Album Version)",
+    "title": "Overdozem (Insane Album Version) (v2)",
     "audio": "assets/Overdozem-album-master.mp3",
     "image": "assets/dozem.png",
     "description": ""
   },
   {
     "id": "archnemesis-insane-album",
-    "title": "Arch Nemesis (Insane Album Version)",
+    "title": "Arch Nemesis (Insane Album Version) (v2)",
     "audio": "assets/ArchNemesis-album-master.mp3",
     "image": "assets/dozem.png",
     "description": ""
   },
   {
     "id": "waytovalhalla-insane-album",
-    "title": "Way to Valhalla (Insane Album Version)",
+    "title": "Way to Valhalla (Insane Album Version) (v2)",
     "audio": "assets/WayToValhalla-album-master.mp3",
     "image": "assets/dozem.png",
     "description": ""
   },
   {
     "id": "vampirehunter-insane-album",
-    "title": "Vampire Hunter's Requiem (Insane Album Version)",
-    "audio": "assets/VampireHunter-album-master.mp3",
+    "title": "Vampire Hunter's Requiem (Insane Album Version) (v2)",
+    "audio": "assets/VampireHuntersRequiem-album-master.mp3",
     "image": "assets/dozem.png",
     "description": ""
   },
   {
     "id": "wintrysilence-insane-album",
-    "title": "Wintry Silence (Insane Album Version)",
+    "title": "Wintry Silence (Insane Album Version) (v2)",
     "audio": "assets/WintrySilence-album-master.mp3",
+    "image": "assets/dozem.png",
+    "description": ""
+  },
+  {
+    "id": "gorefields-insane-album",
+    "title": "Gore Fields (Insane Album Version) (v2)",
+    "audio": "assets/GoreFields-album-master.mp3",
     "image": "assets/dozem.png",
     "description": ""
   },
