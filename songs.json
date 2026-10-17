@@ -161,6 +161,13 @@
     "description": ""
   },
   {
+    "id": "echo-axe",
+    "title": "Echo Axe (feat. Carl Carrion and Annie Holland)",
+    "audio": "assets/EchoAxe-master.mp3",
+    "image": "assets/EchoAxe.png",
+    "description": "Post-Genre metal with AI-generated vocals."
+  },
+  {
     "id": "the-devils-queen",
     "title": "The Devil's Queen (feat. Jerry Leech)",
     "audio": "assets/TheDevilsQueen-168bpm-master.mp3",
