@@ -161,6 +161,13 @@
     "description": ""
   },
   {
+    "id": "death-by-autumn",
+    "title": "Death by Autumn (feat. Annie Holland)",
+    "audio": "assets/GentleRipper-master.mp3",
+    "image": "assets/DeathByAutumn.png",
+    "description": "Beautiful, dark waltz with female AI vocals"
+  },
+  {
     "id": "space-lick",
     "title": "Space Lick (feat. Repentless) (v3)",
     "audio": "assets/SpaceLick-master.mp3",
